@@ -1,5 +1,6 @@
-import gym
-#!pip install gym[box2d]
+
+#!pip install gymnasium[box2d]
+import gymnasium as gym
 import random
 import torch
 import numpy as np
@@ -7,8 +8,8 @@ import pandas as pd
 from collections import deque
 import matplotlib.pyplot as plt
 %matplotlib inline
-#plt.style.use('ggplot')
-#np.set_printoptions(precision=3, linewidth=120)
+plt.style.use('ggplot')
+np.set_printoptions(precision=3, linewidth=120)
 from IPython import display
 from matplotlib.lines import Line2D
 from matplotlib.patches import Rectangle

@@ -3,19 +3,19 @@ import random
 import copy
 from collections import namedtuple, deque
 
-from model import Actor, Critic
+from ddpg_model_bip_X import Actor, Critic
 
 import torch
 import torch.nn.functional as F
 import torch.optim as optim
 
-BUFFER_SIZE = int(1e6)  # replay buffer size
-BATCH_SIZE = 128        # minibatch size
-GAMMA = 0.99            # discount factor
-TAU = 1e-3              # for soft update of target parameters
-LR_ACTOR = 1e-4         # learning rate of the actor 
-LR_CRITIC = 3e-4        # learning rate of the critic
-WEIGHT_DECAY = 0.0001   # L2 weight decay
+BUFFER_SIZE = int(1e5)  # replay buffer size = int(1e6)
+BATCH_SIZE = 128        # minibatch size = 128
+GAMMA = 0.999            # discount factor = 0.99
+TAU = 3e-3              # for soft update of target parameters = 1e-3
+LR_ACTOR = 1e-4         # learning rate of the actor  = 1e-4
+LR_CRITIC = 1e-3        # learning rate of the critic = 3e-4
+WEIGHT_DECAY = 1e-6        # L2 weight decay = 0.0001
 
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
@@ -35,6 +35,9 @@ class Agent():
         self.action_size = action_size
         self.seed = random.seed(random_seed)
 
+        # Noise process
+        self.action_noise = OUNoise(action_size, random_seed)
+
         # Actor Network (w/ Target Network)
         self.actor_local = Actor(state_size, action_size, random_seed).to(device)
         self.actor_target = Actor(state_size, action_size, random_seed).to(device)
@@ -44,9 +47,6 @@ class Agent():
         self.critic_local = Critic(state_size, action_size, random_seed).to(device)
         self.critic_target = Critic(state_size, action_size, random_seed).to(device)
         self.critic_optimizer = optim.Adam(self.critic_local.parameters(), lr=LR_CRITIC, weight_decay=WEIGHT_DECAY)
-
-        # Noise process
-        self.noise = OUNoise(action_size, random_seed)
 
         # Replay memory
         self.memory = ReplayBuffer(action_size, BUFFER_SIZE, BATCH_SIZE, random_seed)
@@ -69,13 +69,13 @@ class Agent():
             action = self.actor_local(state).cpu().data.numpy()
         self.actor_local.train()
         if add_noise:
-            action += self.noise.sample()
+            action += self.action_noise.sample()
         return np.clip(action, -1, 1)
 
     def reset(self):
-        self.noise.reset()
+        self.action_noise.reset()
 
-    def learn(self, experiences, gamma):
+    def learn(self, experiences, gamma, add_noise=True):
         """Update policy and value parameters using given batch of experience tuples.
         Q_targets = r + γ * critic_target(next_state, actor_target(next_state))
         where:
