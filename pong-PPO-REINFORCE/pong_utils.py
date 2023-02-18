@@ -1,13 +1,12 @@
 from parallelEnv import parallelEnv 
+import torch
+import random as rand
+import numpy as np
 import matplotlib
 import matplotlib.pyplot as plt
-import torch
-import numpy as np
-from JSAnimation.IPython_display import display_animation
 from matplotlib import animation
+from JSAnimation.IPython_display import display_animation
 from IPython.display import display
-import random as rand
-
 
 RIGHT=4
 LEFT=5
@@ -128,7 +127,6 @@ def collect_trajectories(envs, policy, tmax=200, nrand=5):
         action = np.where(np.random.rand(n) < probs, RIGHT, LEFT)
         probs = np.where(action==RIGHT, probs, 1.0-probs)
         
-        
         # advance the game (0=no action)
         # we take one action and skip game forward
         fr1, re1, is_done, is_trunc, _ = envs.step(action)
@@ -147,7 +145,6 @@ def collect_trajectories(envs, policy, tmax=200, nrand=5):
         # we want all the lists to be retangular
         if is_done.any():
             break
-
 
     # return pi_theta, states, actions, rewards, probability
     return prob_list, state_list, \
@@ -189,8 +186,8 @@ def surrogate(policy, old_probs, states, actions, rewards,
     # include a regularization term
     # this steers new_policy towards 0.5
     # add in 1.e-10 to avoid log(0) which gives nan
-    entropy = -(new_probs*torch.log(old_probs+1.e-10)+ \
-        (1.0-new_probs)*torch.log(1.0-old_probs+1.e-10))
+    entropy =  -(new_probs*torch.log(old_probs+1.e-10)+ \
+                (1.0-new_probs)*torch.log(1.0-old_probs+1.e-10))
 
     return torch.mean(ratio*rewards + beta*entropy)
 
