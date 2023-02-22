@@ -128,8 +128,8 @@ class parallelEnv(VecEnv):
                         seed=None,
                         spaces=None):
         
-        #env_fns = [ gym.make(env_name, render_mode='rgb_array', frameskip=1, full_action_space=False) for _ in range(n) ]
-        env_fns = [ gym.make(env_name) for _ in range(n) ]
+        env_fns = [ gym.make(env_name, render_mode='rgb_array', frameskip=1, full_action_space=False) for _ in range(n) ]
+        #env_fns = [ gym.make(env_name) for _ in range(n) ]
         
         if seed is not None:
             for i,e in enumerate(env_fns):

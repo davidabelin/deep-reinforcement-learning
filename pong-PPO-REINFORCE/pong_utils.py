@@ -32,7 +32,6 @@ def preprocess_batch(images, bkg_color = np.array([144, 72, 17])):
     batch_input = np.swapaxes(list_of_images_prepro,0,1)
     return torch.from_numpy(batch_input).float().to(device)
 
-
 # function to animate a list of frames
 def animate_frames(frames):
     plt.axis('off')
@@ -147,8 +146,7 @@ def collect_trajectories(envs, policy, tmax=200, nrand=5):
             break
 
     # return pi_theta, states, actions, rewards, probability
-    return prob_list, state_list, \
-        action_list, reward_list
+    return prob_list, state_list, action_list, reward_list
 
 # convert states to probability, passing through the policy
 def states_to_prob(policy, states):
@@ -158,8 +156,7 @@ def states_to_prob(policy, states):
 
 # return sum of log-prob divided by T
 # same thing as -policy_loss
-def surrogate(policy, old_probs, states, actions, rewards,
-              discount = 0.995, beta=0.01):
+def surrogate(policy, old_probs, states, actions, rewards, discount = 0.995, beta=0.01):
 
     discount = discount**np.arange(len(rewards))
     rewards = np.asarray(rewards)*discount[:,np.newaxis]
@@ -194,9 +191,11 @@ def surrogate(policy, old_probs, states, actions, rewards,
     
 # clipped surrogate function
 # similar as -policy_loss for REINFORCE, but for PPO
-def clipped_surrogate(policy, old_probs, states, actions, rewards,
+def clipped_surrogate(policy, old_probs, 
+                      states, actions, rewards,
                       discount=0.995,
-                      epsilon=0.1, beta=0.01):
+                      epsilon=0.1, 
+                      beta=0.01):
 
     discount = discount**np.arange(len(rewards))
     rewards = np.asarray(rewards)*discount[:,np.newaxis]
@@ -242,10 +241,10 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
-class Policy(nn.Module):
+class SolvedImagePolicy(nn.Module):
 
     def __init__(self):
-        super(Policy, self).__init__()
+        super(SolvedImagePolicy, self).__init__()
         # 80x80x2 to 38x38x4
         # 2 channel from the stacked frame
         self.conv1 = nn.Conv2d(2, 4, kernel_size=6, stride=2, bias=False)
@@ -267,3 +266,114 @@ class Policy(nn.Module):
         x = F.relu(self.fc1(x))
         return self.sig(self.fc2(x))
     
+class VectorPolicy(nn.Module):
+    ''' Estimate rewards from states and actions
+        state_size:
+        action_size: 
+    '''
+    def __init__(self, state_size, action_size, random_seed):
+        super(VectorPolicy, self).__init__()
+        self.state_size = state_size
+        self.action_size = action_size
+        self.seed = random.seed(random_seed)
+
+        # fully connected layers
+        self.state_in = nn.Linear(state_size, 64)
+        self.action_in = nn.Linear(action_size, 32) 
+        self.hidden = nn.Linear(96, 64)
+        self.reward_out = nn.Linear(64, 1)
+
+        # Sigmoid to Tanh
+        #self.sig = nn.Sigmoid()
+        self.tanh = nn.Tanh()
+        self.leaky = nn.LeakyRelu()  
+        
+    def forward(self, state, action):
+        s = F.relu(self.states_in(state))
+        a = self.leaky(self.action_in(action))
+        x = torch.cat(s, a)
+        x = F.relu(self.hidden(x))
+        return self.tanh(self.reward_out(x))
+
+# set up a convolutional neural net
+# the output is the probability of moving right
+# P(left) = 1-P(right)
+class BarePolicy(nn.Module):
+
+    def __init__(self):
+        super(BarePolicy, self).__init__()
+        
+    ########
+    ## 
+    ## Modify your neural network
+    ##
+    ########
+        
+        # 80x80 to outputsize x outputsize
+        # outputsize = (inputsize - kernel_size + stride)/stride 
+        # (round up if not an integer)
+
+        # output = 9x9 here
+        self.conv1 = nn.Conv2d(2, 32, kernel_size=5, stride=3, padding=1)
+        self.conv2 = nn.Conv2d(32, 16, kernel_size=4, stride=3, padding=1)
+        self.size=16*9*9
+        
+        # 1 fully connected layer
+        self.fc1 = nn.Linear(self.size, 640)
+        self.fc2 = nn.Linear(640, 1)
+        self.sig = nn.Sigmoid()
+        
+    def forward(self, x):
+        
+    ########
+    ## 
+    ## Modify your neural network
+    ##
+    ########
+
+        x = F.relu(self.conv1(x))
+        x = F.relu(self.conv2(x))
+        # flatten the tensor
+        x = x.view(-1,self.size)
+        x = F.relu(self.fc1(x))
+        return self.sig(self.fc2(x))
+
+    
+def run_ddpg20(n_episodes=100, print_every=100):
+    scores_deque = deque(maxlen=print_every)
+    all_scores = []
+    for i_episode in range(1, n_episodes+1):
+        env_info = env.reset(train_mode=True)[brain_name]      # reset the environment    
+        states = env_info.vector_observations[-1]                  # get the current state (for each agent)
+        scores = np.zeros(num_agents)                          # initialize the score (for each agent)
+        while True:
+            actions = [agent.act(state) for agent,state in zip(agency,states)]  # select an action (for each agent)
+            env_info = env.step(actions)[brain_name]           # send all actions to tne environment
+            next_states = env_info.vector_observations         # get next state (for each agent)
+            rewards = env_info.rewards                         # get reward (for each agent)
+            dones = env_info.local_done                        # see if episode finished
+            scores += env_info.rewards                         # update the score (for each agent)
+            states = next_states                               # roll over states to next time step
+            if np.any(dones):                                  # exit loop if episode finished
+                break                                
+        scores_deque.append(scores)
+        all_scores.append(scores)
+        print('\rEpisode {}\tAverage Score: {:.2f}'.format(i_episode, np.mean(scores_deque)), end="")
+        torch.save(agent.actor_local.state_dict(), 'checkpoint_actor.pth')
+        torch.save(agent.critic_local.state_dict(), 'checkpoint_critic.pth')
+        if i_episode % print_every == 0:
+            print('\rEpisode {}\tAverage Score: {:.2f}'.format(i_episode, np.mean(scores_deque[0])))            
+    return all_scores
+    
+def output_volume(in_dims, k, s, p, transpose=False):
+    ''' Calculate a convolutional layer's output size params:
+        in_dims = input size 
+        k = kernel size 
+        s = stride (int)
+        p = padding (int)
+    '''
+    if not transpose:
+        out_size = (in_dims - k + 2*p)/s + 1 #convolution out
+    else:
+        out_size = (in_dims - 1)*s + k - 2*p #deconvolution out
+    return int(np.floor(out_size))
