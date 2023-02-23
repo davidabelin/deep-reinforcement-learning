@@ -9,20 +9,21 @@ import torch
 import torch.nn.functional as F
 import torch.optim as optim
 
-BUFFER_SIZE = int(1e5)  # replay buffer size = int(1e6)
+BUFFER_SIZE = int(3e6)  # replay buffer size = int(1e6)
 BATCH_SIZE = 128        # minibatch size = 128
-GAMMA = 0.999            # discount factor = 0.99
+GAMMA = 0.99            # discount factor = 0.99
 TAU = 3e-3              # for soft update of target parameters = 1e-3
 LR_ACTOR = 1e-4         # learning rate of the actor  = 1e-4
 LR_CRITIC = 1e-3        # learning rate of the critic = 3e-4
 WEIGHT_DECAY = 1e-6        # L2 weight decay = 0.0001
+LEARN_EVERY = 10
 
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
 class Agent():
     """Interacts with and learns from the environment."""
     
-    def __init__(self, state_size, action_size, random_seed):
+    def __init__(self, state_size, action_size, random_seed, learn_every=LEARN_EVERY):
         """Initialize an Agent object.
         
         Params
@@ -34,6 +35,7 @@ class Agent():
         self.state_size = state_size
         self.action_size = action_size
         self.seed = random.seed(random_seed)
+        self.learn_every = learn_every
 
         # Noise process
         self.action_noise = OUNoise(action_size, random_seed)
@@ -51,13 +53,13 @@ class Agent():
         # Replay memory
         self.memory = ReplayBuffer(action_size, BUFFER_SIZE, BATCH_SIZE, random_seed)
     
-    def step(self, state, action, reward, next_state, done):
+    def step(self, step, state, action, reward, next_state, done):
         """Save experience in replay memory, and use random sample from buffer to learn."""
         # Save experience / reward
         self.memory.add(state, action, reward, next_state, done)
 
         # Learn, if enough samples are available in memory
-        if len(self.memory) > BATCH_SIZE:
+        if len(self.memory) > BATCH_SIZE and step%self.learn_every==0:
             experiences = self.memory.sample()
             self.learn(experiences, GAMMA)
 
@@ -101,6 +103,7 @@ class Agent():
         # Minimize the loss
         self.critic_optimizer.zero_grad()
         critic_loss.backward()
+        torch.nn.utils.clip_grad_norm_(self.critic_local.parameters(), 1)
         self.critic_optimizer.step()
 
         # ---------------------------- update actor ---------------------------- #
@@ -174,12 +177,19 @@ class ReplayBuffer:
     
     def sample(self):
         """Randomly sample a batch of experiences from memory."""
-        experiences = random.sample(self.memory, k=self.batch_size)
-
-        states = torch.from_numpy(np.vstack([e.state for e in experiences if e is not None])).float().to(device)
+        stats = [m.state for m in self.memory if m is not None]
+        stats += [m.next_state for m self.memory if m is not None]
+        mu = np.mean(stats)
+        sig = np.std(stats)
+        if sig==0.: sig==1e-6
+        rews = [m.reward for m in self.memory if m is not None]
+        #experiences = random.sample(self.memory, k=self.batch_size)
+        experiences = random.choices(self.memory, k=self.batch_size, probs=rews)
+        
+        states = torch.from_numpy(np.vstack([(e.state-mu)/sig for e in experiences if e is not None])).float().to(device)
         actions = torch.from_numpy(np.vstack([e.action for e in experiences if e is not None])).float().to(device)
         rewards = torch.from_numpy(np.vstack([e.reward for e in experiences if e is not None])).float().to(device)
-        next_states = torch.from_numpy(np.vstack([e.next_state for e in experiences if e is not None])).float().to(device)
+        next_states = torch.from_numpy(np.vstack([(e.next_state-mu)/sig for e in experiences if e is not None])).float().to(device)
         dones = torch.from_numpy(np.vstack([e.done for e in experiences if e is not None]).astype(np.uint8)).float().to(device)
 
         return (states, actions, rewards, next_states, dones)
