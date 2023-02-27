@@ -3,20 +3,20 @@ import random
 import copy
 from collections import namedtuple, deque
 
-from ddpg_model_bip_X import Actor, Critic
+from ddpg_model_bip_XX import ActorX, CriticX
 
 import torch
 import torch.nn.functional as F
 import torch.optim as optim
 
-BUFFER_SIZE = int(3e6)  # replay buffer size = int(1e6)
-BATCH_SIZE = 128        # minibatch size = 128
-GAMMA = 0.99            # discount factor = 0.99
+BUFFER_SIZE = int(6e5)  # replay buffer size = int(1e6)
+BATCH_SIZE = 64        # minibatch size = 128
+GAMMA = 0.991            # discount factor = 0.99
 TAU = 3e-3              # for soft update of target parameters = 1e-3
 LR_ACTOR = 1e-4         # learning rate of the actor  = 1e-4
 LR_CRITIC = 1e-3        # learning rate of the critic = 3e-4
-WEIGHT_DECAY = 1e-6        # L2 weight decay = 0.0001
-LEARN_EVERY = 10
+WEIGHT_DECAY = 1e-5        # L2 weight decay = 0.0001
+LEARN_EVERY = 5
 
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
@@ -41,17 +41,17 @@ class Agent():
         self.action_noise = OUNoise(action_size, random_seed)
 
         # Actor Network (w/ Target Network)
-        self.actor_local = Actor(state_size, action_size, random_seed).to(device)
-        self.actor_target = Actor(state_size, action_size, random_seed).to(device)
+        self.actor_local = ActorX(state_size, action_size, random_seed).to(device)
+        self.actor_target = ActorX(state_size, action_size, random_seed).to(device)
         self.actor_optimizer = optim.Adam(self.actor_local.parameters(), lr=LR_ACTOR)
 
         # Critic Network (w/ Target Network)
-        self.critic_local = Critic(state_size, action_size, random_seed).to(device)
-        self.critic_target = Critic(state_size, action_size, random_seed).to(device)
+        self.critic_local = CriticX(state_size, action_size, random_seed).to(device)
+        self.critic_target = CriticX(state_size, action_size, random_seed).to(device)
         self.critic_optimizer = optim.Adam(self.critic_local.parameters(), lr=LR_CRITIC, weight_decay=WEIGHT_DECAY)
 
         # Replay memory
-        self.memory = ReplayBuffer(action_size, BUFFER_SIZE, BATCH_SIZE, random_seed)
+        self.memory = ReplayBuffer(BUFFER_SIZE, BATCH_SIZE, random_seed)
     
     def step(self, step, state, action, reward, next_state, done):
         """Save experience in replay memory, and use random sample from buffer to learn."""
@@ -104,6 +104,7 @@ class Agent():
         # Minimize the loss
         self.critic_optimizer.zero_grad()
         critic_loss.backward()
+        # Suggested in assignment
         torch.nn.utils.clip_grad_norm_(self.critic_local.parameters(), 1)
         self.critic_optimizer.step()
 
@@ -158,43 +159,51 @@ class OUNoise:
 class ReplayBuffer:
     """Fixed-size buffer to store experience tuples."""
 
-    def __init__(self, action_size, buffer_size, batch_size, seed):
+    def __init__(self, buffer_size, batch_size, seed):  #, action_size
         """Initialize a ReplayBuffer object.
         Params
         ======
             buffer_size (int): maximum size of buffer
             batch_size (int): size of each training batch
         """
-        self.action_size = action_size
         self.memory = deque(maxlen=buffer_size)  # internal memory (deque)
+        self.priority_weights = deque(maxlen=buffer_size)
         self.batch_size = batch_size
         self.experience = namedtuple("Experience", field_names=["state", "action", "reward", "next_state", "done"])
         self.seed = random.seed(seed)
     
-    def add(self, state, action, reward, next_state, done):
+    def add(self, state, action, reward, next_state, done, prob):
         """Add a new experience to memory."""
+        self.priority_weights.append(prob)
         e = self.experience(state, action, reward, next_state, done)
         self.memory.append(e)
     
     def sample(self):
         """Randomly sample a batch of experiences from memory."""
-        stats = [m.state for m in self.memory if m is not None]
-        stats += [m.next_state for m in self.memory if m is not None]
-        mu = np.mean(stats)
-        sig = np.std(stats)
-        if sig==0.: sig==1e-6
-        rews = [m.reward for m in self.memory if m is not None]
-        #experiences = random.sample(self.memory, k=self.batch_size)
-        #random.choices(self.memory, k=self.batch_size, probs=rews)
-        experiences = random.choices(self.memory, k=self.batch_size, cum_weights=rews)
+        experiences = random.choices(self.memory, k=BATCH_SIZE, cum_weights=self.priority_weights)
+        states = [e.state for e in experiences if e is not None]
+        actions = [e.action for e in experiences if e is not None]
+        rewards = [e.reward for e in experiences if e is not None]
+        next_states = [e.next_state for e in experiences if e is not None]
+        dones = [e.done for e in experiences if e is not None]
+
+        #if len(self.memory) < 500 or len(self.memory)%100==0:
+        mu = np.mean(np.asarray(states + next_states), axis=0)
+        sig = np.std(np.asarray(states + next_states), axis=0) + 1e-3
+        #    self.mu = mu; self.sig = sig
+        #else: 
+        #    mu=self.mu; sig=self.sig
+        states = (np.asarray(states)-mu) / sig
+        next_states = (np.asarray(next_states)-mu) / sig
         
-        states = torch.from_numpy(np.vstack([(e.state-mu)/sig for e in experiences if e is not None])).float().to(device)
-        actions = torch.from_numpy(np.vstack([e.action for e in experiences if e is not None])).float().to(device)
-        rewards = torch.from_numpy(np.vstack([e.reward for e in experiences if e is not None])).float().to(device)
-        next_states = torch.from_numpy(np.vstack([(e.next_state-mu)/sig for e in experiences if e is not None])).float().to(device)
-        dones = torch.from_numpy(np.vstack([e.done for e in experiences if e is not None]).astype(np.uint8)).float().to(device)
+        states = torch.from_numpy(np.vstack(states)).float().to(device)
+        actions = torch.from_numpy(np.vstack(actions)).float().to(device)
+        rewards = torch.from_numpy(np.vstack(rewards)).float().to(device)
+        next_states = torch.from_numpy(np.vstack(next_states)).float().to(device)
+        dones = torch.from_numpy(np.vstack(dones).astype(np.uint8)).float().to(device)
 
         return (states, actions, rewards, next_states, dones)
+    
 
     def __len__(self):
         """Return the current size of internal memory."""
