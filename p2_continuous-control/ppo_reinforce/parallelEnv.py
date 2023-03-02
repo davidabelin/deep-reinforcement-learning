@@ -3,9 +3,9 @@
 # see https://github.com/openai/baselines/baselines/common/vec_env/subproc_vec_env.py
 # 
 
+
 import numpy as np
-#import gym  
-#nasium as gym
+import gym
 from multiprocessing import Process, Pipe
 from abc import ABC, abstractmethod
 
@@ -123,13 +123,12 @@ def worker(remote, parent_remote, env_fn_wrapper):
 
 
 class parallelEnv(VecEnv):
-    def __init__(self,  env_name='PongDeterministic-v4',
-                        n=4,
-                        seed=None,
-                        spaces=None):
-        
+    def __init__(self, env_name='PongDeterministic-v4',
+                 n=4, seed=None,
+                 spaces=None):
+
         env_fns = [ gym.make(env_name) for _ in range(n) ]
-        
+
         if seed is not None:
             for i,e in enumerate(env_fns):
                 e.seed(i+seed)

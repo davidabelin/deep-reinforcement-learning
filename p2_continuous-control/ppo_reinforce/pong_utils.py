@@ -1,4 +1,4 @@
-from parallelEnv import parallelEnv
+from parallelEnv import parallelEnv 
 import matplotlib
 import matplotlib.pyplot as plt
 import torch
@@ -8,10 +8,26 @@ from matplotlib import animation
 from IPython.display import display
 import random as rand
 
+
 RIGHT=4
 LEFT=5
 
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
+
+import numpy as np
+
+def output_volume(in_dims, k=3, s=2, p=0, transpose=False):
+    ''' Calculate a convolutional layer's output size params:
+        in_dims = input size (int)
+        k = kernel size 
+        s = stride (int)
+        p = padding (int)
+    '''
+    if not transpose:
+        out_size = (in_dims - k + 2*p)/s + 1 #convolution out
+    else:
+        out_size = (in_dims - 1)*s + k - 2*p #deconvolution out
+    return int(np.floor(out_size))
  
 # preprocess a single frame
 # crop image and downsample to 80x80
@@ -19,6 +35,7 @@ device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 def preprocess_single(image, bkg_color = np.array([144, 72, 17])):
     img = np.mean(image[34:-16:2,::2]-bkg_color, axis=-1)/255.
     return img
+
 
 # convert outputs of parallelEnv to inputs to pytorch neural net
 # this is useful for batch processing especially on the GPU
@@ -46,7 +63,8 @@ def animate_frames(frames):
         lambda x: patch.set_data(frames[x]), frames = len(frames), interval=30)
     
     display(display_animation(fanim, default_mode='once'))
-    
+   
+
 # play a game and display the animation
 # nrand = number of random steps before using the policy
 def play(env, policy, time=2000, preprocess=None, nrand=5):
@@ -84,7 +102,6 @@ def play(env, policy, time=2000, preprocess=None, nrand=5):
     
     animate_frames(anim_frames)
     return 
-
 
 
 # collect trajectories for a parallelized parallelEnv object
@@ -125,7 +142,6 @@ def collect_trajectories(envs, policy, tmax=200, nrand=5):
         action = np.where(np.random.rand(n) < probs, RIGHT, LEFT)
         probs = np.where(action==RIGHT, probs, 1.0-probs)
         
-        
         # advance the game (0=no action)
         # we take one action and skip game forward
         fr1, re1, is_done, _ = envs.step(action)
@@ -144,57 +160,20 @@ def collect_trajectories(envs, policy, tmax=200, nrand=5):
         if is_done.any():
             break
 
-
     # return pi_theta, states, actions, rewards, probability
     return prob_list, state_list, action_list, reward_list
+
 
 # convert states to probability, passing through the policy
 def states_to_prob(policy, states):
     states = torch.stack(states)
     policy_input = states.view(-1,*states.shape[-3:])
     return policy(policy_input).view(states.shape[:-3])
-
-# return sum of log-prob divided by T
-# same thing as -policy_loss
-def surrogate(policy, old_probs, states, actions, rewards,
-              discount = 0.995, beta=0.01):
-
-    discount = discount**np.arange(len(rewards))
-    rewards = np.asarray(rewards)*discount[:,np.newaxis]
-    
-    # convert rewards to future rewards
-    rewards_future = rewards[::-1].cumsum(axis=0)[::-1]
-    
-    mean = np.mean(rewards_future, axis=1)
-    std = np.std(rewards_future, axis=1) + 1.0e-10
-
-    rewards_normalized = (rewards_future - mean[:,np.newaxis])/std[:,np.newaxis]
-    
-    # convert everything into pytorch tensors and move to gpu if available
-    actions = torch.tensor(actions, dtype=torch.int8, device=device)
-    old_probs = torch.tensor(old_probs, dtype=torch.float, device=device)
-    rewards = torch.tensor(rewards_normalized, dtype=torch.float, device=device)
-
-    # convert states to policy (or probability)
-    new_probs = states_to_prob(policy, states)
-    new_probs = torch.where(actions == RIGHT, new_probs, 1.0-new_probs)
-
-    ratio = new_probs/old_probs
-
-    # include a regularization term
-    # this steers new_policy towards 0.5
-    # add in 1.e-10 to avoid log(0) which gives nan
-    entropy = -(new_probs*torch.log(old_probs+1.e-10)+ \
-        (1.0-new_probs)*torch.log(1.0-old_probs+1.e-10))
-
-    return torch.mean(ratio*rewards + beta*entropy)
-
+   
     
 # clipped surrogate function
 # similar as -policy_loss for REINFORCE, but for PPO
-def clipped_surrogate(policy, old_probs, states, actions, rewards,
-                      discount=0.995,
-                      epsilon=0.1, beta=0.01):
+def clipped_surrogate(policy, old_probs, states, actions, rewards, discount=0.995, epsilon=0.1, beta=0.01):
 
     discount = discount**np.arange(len(rewards))
     rewards = np.asarray(rewards)*discount[:,np.newaxis]
@@ -226,10 +205,8 @@ def clipped_surrogate(policy, old_probs, states, actions, rewards,
     # include a regularization term
     # this steers new_policy towards 0.5
     # add in 1.e-10 to avoid log(0) which gives nan
-    entropy = -(new_probs*torch.log(old_probs+1.e-10)+ \
-        (1.0-new_probs)*torch.log(1.0-old_probs+1.e-10))
+    entropy = -(new_probs*torch.log(old_probs+1.e-10)+(1.0-new_probs)*torch.log(1.0-old_probs+1.e-10))
 
-    
     # this returns an average of all the entries of the tensor
     # effective computing L_sur^clip / T
     # averaged over time-step and number of trajectories
@@ -240,20 +217,21 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
-class Policy(nn.Module):
+class Policy2d(nn.Module):
 
     def __init__(self):
-        super(Policy, self).__init__()
-        # 80x80x2 to 38x38x4
+        super(ConvoPolicy, self).__init__()
+                        #self.batchnorm = nn.BatchNorm2d()
         # 2 channel from the stacked frame
-        self.conv1 = nn.Conv2d(2, 4, kernel_size=6, stride=2, bias=False)
-        # 38x38x4 to 9x9x32
-        self.conv2 = nn.Conv2d(4, 16, kernel_size=6, stride=4)
-        self.size=9*9*16
+        # 80x80x2 to 26x26x8
+        self.conv1 = nn.Conv2d(2, 8, kernel_size=5, stride=3, padding=1, bias=False)
+        # 26x26x8 to 7x7x16
+        self.conv2 = nn.Conv2d(8, 16, kernel_size=6, stride=3)
+        self.size=7*7*16  #=784
         
         # two fully connected layer
-        self.fc1 = nn.Linear(self.size, 256)
-        self.fc2 = nn.Linear(256, 1)
+        self.fc1 = nn.Linear(self.size, 112) # =7*16
+        self.fc2 = nn.Linear(112, 1)
 
         # Sigmoid to 
         self.sig = nn.Sigmoid()
@@ -265,3 +243,20 @@ class Policy(nn.Module):
         x = F.relu(self.fc1(x))
         return self.sig(self.fc2(x))
     
+
+    class Policy(nn.Module):
+
+    def __init__(self):
+        super(Policy, self).__init__(state_size=33, insz=64, hidsz=32, action_size=4)
+        #fully connected layers
+        self.fc_in = nn.Linear(state_size, insz)
+        self.fc_hid = nn.Linear(insz, hidsz)
+        self.fc_out = nn.Linear(hidsz, action_size)
+        # Sigmoid to 
+        self.sig = nn.Sigmoid()
+        
+    def forward(self, x):
+        ## Expecting pre-normed input
+        x = F.relu(self.fc_in(x))
+        x = F.relu(self.fc_hid(x))
+        return self.sig(self.fc_out(x))
