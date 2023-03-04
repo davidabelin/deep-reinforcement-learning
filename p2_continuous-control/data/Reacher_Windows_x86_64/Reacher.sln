@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33424.131
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{911E67C6-3D85-4FCE-B560-20A9C3E3FF48}") = "Reacher", "Reacher.exe", "{4C68D80F-3F64-4681-905D-D6B31015E907}"
+	ProjectSection(DebuggerProjectSystem) = preProject
+		PortSupplier = 00000000-0000-0000-0000-000000000000
+		Executable = C:\Users\David\Documents\Repositories\deep-reinforcement-learning\p2_continuous-control\data\Reacher_Windows_x86_64\Reacher.exe
+		RemoteMachine = ORBIT
+		StartingDirectory = C:\Users\David\Documents\Repositories\deep-reinforcement-learning\p2_continuous-control\data\Reacher_Windows_x86_64
+		Environment = Default
+		LaunchingEngine = 00000000-0000-0000-0000-000000000000
+		UseLegacyDebugEngines = No
+		LaunchSQLEngine = No
+		AttachLaunchAction = No
+		IORedirection = Auto
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4C68D80F-3F64-4681-905D-D6B31015E907}.Release|x64.ActiveCfg = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {165C9253-1973-4C01-AA76-2E3E01703519}
+	EndGlobalSection
+EndGlobal

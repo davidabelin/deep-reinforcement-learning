@@ -3,7 +3,7 @@ import random
 import copy
 from collections import namedtuple, deque
 
-from model import Actor, Critic
+from ddpg_model_pend import Actor, Critic
 
 import torch
 import torch.nn.functional as F
@@ -36,15 +36,19 @@ class Agent():
         self.seed = random.seed(random_seed)
 
         # Actor Network (w/ Target Network)
-        self.actor_local = Actor(state_size, action_size, random_seed).to(device)
-        self.actor_target = Actor(state_size, action_size, random_seed).to(device)
+        self.actor_local = Actor(state_size, action_size, random_seed,
+                                 fc1_units=64, fc2_units=32).to(device)
+        self.actor_target = Actor(state_size, action_size, random_seed,
+                                 fc1_units=64, fc2_units=32).to(device)
         self.actor_optimizer = optim.Adam(self.actor_local.parameters(), lr=LR_ACTOR)
 
         # Critic Network (w/ Target Network)
-        self.critic_local = Critic(state_size, action_size, random_seed).to(device)
-        self.critic_target = Critic(state_size, action_size, random_seed).to(device)
-        self.critic_optimizer = optim.Adam(self.critic_local.parameters(), lr=LR_CRITIC, weight_decay=WEIGHT_DECAY)
-
+        self.critic_local = Critic(state_size, action_size, random_seed, 
+                                   fcs1_units=32, fc2_units=64).to(device)
+        self.critic_target = Critic(state_size, action_size, random_seed,
+                                    fcs1_units=32, fc2_units=64).to(device)
+        self.critic_optimizer = optim.Adam(self.critic_local.parameters(), lr=LR_CRITIC, 
+                                           weight_decay=WEIGHT_DECAY)
         # Noise process
         self.noise = OUNoise(action_size, random_seed)
 
