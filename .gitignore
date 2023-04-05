@@ -105,3 +105,4 @@ ENV/
 *.zip
 *.pth
 p1_navigation/Value-based-methods/
+*.srt

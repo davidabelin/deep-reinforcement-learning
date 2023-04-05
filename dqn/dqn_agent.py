@@ -62,6 +62,7 @@ class Agent():
         ======
             state (array_like): current state
             eps (float): epsilon, for epsilon-greedy action selection
+                         eps = 0, always greedy; eps = 1, always random
         """
         state = torch.from_numpy(state).float().unsqueeze(0).to(device)
         self.qnetwork_local.eval()
@@ -75,12 +76,13 @@ class Agent():
         else:
             return random.choice(np.arange(self.action_size))
 
+    
     def learn(self, experiences, gamma):
         """Update value parameters using given batch of experience tuples.
 
         Params
         ======
-            experiences (Tuple[torch.Tensor]): tuple of (s, a, r, s', done) tuples 
+            experiences (Tuple[torch.Variable]): tuple of (s, a, r, s', done) tuples 
             gamma (float): discount factor
         """
         states, actions, rewards, next_states, dones = experiences
@@ -93,6 +95,9 @@ class Agent():
         # Get expected Q values from local model
         Q_expected = self.qnetwork_local(states).gather(1, actions)
 
+        # priority proportional to unweighted diff:
+        priority = abs(Q_expected - Q_targets)
+
         # Compute loss
         loss = F.mse_loss(Q_expected, Q_targets)
         # Minimize the loss
@@ -101,20 +106,21 @@ class Agent():
         self.optimizer.step()
 
         # ------------------- update target network ------------------- #
-        self.soft_update(self.qnetwork_local, self.qnetwork_target, TAU)                     
+        self.soft_update(self.qnetwork_local, self.qnetwork_target, TAU)                      
 
+    
     def soft_update(self, local_model, target_model, tau):
         """Soft update model parameters.
         θ_target = τ*θ_local + (1 - τ)*θ_target
 
         Params
         ======
-            local_model (PyTorch model): weights will be copied from
-            target_model (PyTorch model): weights will be copied to
+            local_model (PyTorch model): weights will be copied from; local_theta
+            target_model (PyTorch model): weights will be copied to; target_theta
             tau (float): interpolation parameter 
         """
-        for target_param, local_param in zip(target_model.parameters(), local_model.parameters()):
-            target_param.data.copy_(tau*local_param.data + (1.0-tau)*target_param.data)
+        for target_theta, local_theta in zip(target_model.parameters(), local_model.parameters()):
+            target_theta.data.copy_(tau*local_theta.data + (1.0-tau)*target_theta.data)
 
 
 class ReplayBuffer:
