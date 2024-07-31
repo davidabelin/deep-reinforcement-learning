@@ -140,12 +140,16 @@ class parallelEnv(VecEnv):
         self.waiting = False
         self.closed = False
         nenvs = len(env_fns)
+        
         self.remotes, self.work_remotes = zip(*[Pipe() for _ in range(nenvs)])
+        
         self.ps = [Process(target=worker, args=(work_remote, remote, CloudpickleWrapper(env_fn)))
-            for (work_remote, remote, env_fn) in zip(self.work_remotes, self.remotes, env_fns)]
+                  for (work_remote, remote, env_fn) in zip(self.work_remotes, self.remotes, env_fns)]
+        
         for p in self.ps:
             p.daemon = True # if the main process crashes, we should not cause things to hang
             p.start()
+        
         for remote in self.work_remotes:
             remote.close()
 
@@ -166,7 +170,7 @@ class parallelEnv(VecEnv):
 
     def reset(self):
         for remote in self.remotes:
-            remote.send(('reset', None))
+            remote.send(('reset', None)) 
         return np.stack([remote.recv() for remote in self.remotes])
 
     def reset_task(self):

@@ -21,6 +21,7 @@ class Actor(nn.Module):
             seed (int): Random seed
             fc1_units (int): Number of nodes in first hidden layer
             fc2_units (int): Number of nodes in second hidden layer
+            output (float): continuous action values in (-1,1)
         """
         super(Actor, self).__init__()
         self.seed = torch.manual_seed(seed)
@@ -33,7 +34,7 @@ class Actor(nn.Module):
         self.fc2.weight.data.uniform_(-3e-3, 3e-3)
 
     def forward(self, state):
-        """Build an actor (policy) network that maps states -> actions."""
+        """Build an actor (policy) network that maps states -> continuous actions."""
         x = F.relu(self.fc1(state))
         return torch.tanh(self.fc2(x))
 
@@ -50,6 +51,7 @@ class Critic(nn.Module):
             seed (int): Random seed
             fcs1_units (int): Number of nodes in the first hidden layer
             fc2_units (int): Number of nodes in the second hidden layer
+            output (float): estimated value of each state given mu(a|s) from actor
         """
         super(Critic, self).__init__()
         self.seed = torch.manual_seed(seed)
@@ -66,7 +68,7 @@ class Critic(nn.Module):
         self.fc4.weight.data.uniform_(-3e-3, 3e-3)
 
     def forward(self, state, action):
-        """Build a critic (value) network that maps (state, action) pairs -> Q-values."""
+        """Build a critic (value) network that maps (state, action) pairs -> MAX(Q-values)."""
         xs = F.leaky_relu(self.fcs1(state))
         x = torch.cat((xs, action), dim=1)
         x = F.leaky_relu(self.fc2(x))

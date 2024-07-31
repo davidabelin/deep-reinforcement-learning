@@ -5,7 +5,7 @@ import torch.nn.functional as F
 class QNetwork(nn.Module):
     """Actor (Policy) Model."""
 
-    def __init__(self, state_size, action_size, seed, fc1_units=64, fc2_units=32):
+    def __init__(self, state_size, action_size, seed, fc1_units=256, fc2_units=64):
         """Initialize parameters and build model.
         Params
         ======
@@ -23,8 +23,9 @@ class QNetwork(nn.Module):
 
     def forward(self, state):
         """Assign action_values to states according to current policy
-           param: state (list-like) of values from environent of shape (batch_size, state_size)
-           Returns a Q-value estimate for each possible action: "OFF", "MAIN", "RIGHT", "LEFT"
+           Params 
+           state (list-like) of values from environent of shape (batch_size, state_size)
+           Returns: a Q-value estimate for each possible action: "OFF", "MAIN", "RIGHT", "LEFT"
            These values can be converted into relative probabilities by passing the values through a
            softmax function. An epsilon-greedy choice can be made on either to determine the action taken.
         """
@@ -49,8 +50,8 @@ class QQNetwork(nn.Module):
         self.seed = torch.manual_seed(seed)
         self.state0 = nn.Linear(state_size, state_size)
         self.state1 = nn.Linear(state_size, state_size)
-        self.hidden = nn.Linear(2*state_size, action_size)
-        self.out = nn.Linear(action_size, action_size)
+        self.hidden = nn.Linear(2*state_size, 8*action_size)
+        self.out = nn.Linear(8*action_size, action_size)
 
     def forward(self, state):
         """Build a network that maps state -> action values.

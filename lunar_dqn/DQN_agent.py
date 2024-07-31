@@ -98,6 +98,7 @@ class Agent():
 
         # Compute loss
         loss = F.mse_loss(Q_expected, Q_target)
+        
         # Minimize the loss
         self.optimizer.zero_grad()
         loss.backward()
@@ -137,10 +138,7 @@ class ReplayBuffer:
             seed (int): random seed
         """
         self.batch_size = batch_size
-        self.memory = deque(maxlen=buffer_size)  
-        #self.rewards = deque(maxlen=buffer_size)
-        #self.reward_means = []
-        #self.reward_stds = []
+        self.memory = deque(maxlen=buffer_size) 
         # Each "experience" is the outcome (as "sars'd") from one step taken by one agent in env
         # state --> action --> reward & next_state (done=True if next state is S+)
         self.experience = namedtuple("Experience", field_names=["state", "action", "reward", "next_state", "done"])
@@ -150,23 +148,11 @@ class ReplayBuffer:
         """Add a new experience to memory."""
         e = self.experience(state, action, reward, next_state, done)
         self.memory.append(e)
-        #self.rewards.append(reward)
           
     def sample(self):
         experiences = random.sample(self.memory, k=self.batch_size)
         states, actions, rewards, next_states, dones = disentangle(experiences)
-        
-        # Scale state values to (0,1) using env-given max's and min's
-        #states = scale_input_batch(states)
-        #next_states = scale_input_batch(next_states)
-        
-        # Norm rewards to current mean and std of all rewards in memory
-        #reward_mean = np.mean(self.rewards)
-        #reward_std = np.std(self.rewards)
-        #rewards = log_norm(rewards)
-        #self.reward_means.append(reward_mean)
-        #self.reward_stds.append(reward_std)
-        
+
         # Cast prepped input to tensors
         states = torch.from_numpy(np.vstack(states)).float().to(device)
         actions = torch.from_numpy(np.vstack(actions)).long().to(device)
@@ -179,8 +165,8 @@ class ReplayBuffer:
     def __len__(self):
         """Return the current size of internal memory."""
         return len(self.memory)
-
-       
+    
+    
 def evaluate(state, use_local=True):    
     """Using a network offline (no_grad) to estimate state -> action values.
        Input: 

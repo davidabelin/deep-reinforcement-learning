@@ -111,7 +111,7 @@ def worker(remote, parent_remote, env_fn_wrapper):
             ob, info = env.reset()
             remote.send(ob)
         elif cmd == 'reset_task':
-            ob = env.reset_task()
+            ob, info = env.reset_task()
             remote.send(ob)
         elif cmd == 'close':
             remote.close()
@@ -128,12 +128,12 @@ class parallelEnv(VecEnv):
                         seed=None,
                         spaces=None):
         
-        env_fns = [ gym.make(env_name, render_mode='rgb_array', frameskip=1, full_action_space=False) for _ in range(n) ]
-        #env_fns = [ gym.make(env_name) for _ in range(n) ]
+        self.env_fns = [ gym.make(env_name, render_mode='rgb_array') for _ in range(n) ]
+        self.n = n
         
         if seed is not None:
-            for i,e in enumerate(env_fns):
-                e.seed(i+seed)
+            for i, e in enumerate(self.env_fns):
+                e.seed(i*n+seed)
         
         """
         envs: list of gym environments to run in subprocesses
@@ -141,19 +141,25 @@ class parallelEnv(VecEnv):
         """
         self.waiting = False
         self.closed = False
-        nenvs = len(env_fns)
-        self.remotes, self.work_remotes = zip(*[Pipe() for _ in range(nenvs)])
+        #nenvs = n#len(self.env_fns)
+        self.remotes, self.work_remotes = zip(*[Pipe() for _ in range(n)])
+        
+        # worker args are (remote, parent_remote, env_fn_wrapper)
+        # so worker's remotes are these self.work_remotes and 
+        # worker's parent_remotes are these self.remotes
         self.ps = [Process(target=worker, args=(work_remote, remote, CloudpickleWrapper(env_fn)))
-            for (work_remote, remote, env_fn) in zip(self.work_remotes, self.remotes, env_fns)]
+                   for (work_remote, remote, env_fn) in zip(self.work_remotes, self.remotes, self.env_fns)]
+        
         for p in self.ps:
             p.daemon = True # if the main process crashes, we should not cause things to hang
             p.start()
+        
         for remote in self.work_remotes:
             remote.close()
 
         self.remotes[0].send(('get_spaces', None))
         observation_space, action_space = self.remotes[0].recv()
-        VecEnv.__init__(self, len(env_fns), observation_space, action_space)
+        VecEnv.__init__(self, n, observation_space, action_space)
 
     def step_async(self, actions):
         for remote, action in zip(self.remotes, actions):

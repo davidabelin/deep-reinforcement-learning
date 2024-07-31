@@ -8,7 +8,6 @@ from matplotlib import animation
 from IPython.display import display
 import random as rand
 
-
 RIGHT=4
 LEFT=5
 

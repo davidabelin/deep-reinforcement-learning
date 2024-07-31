@@ -12,7 +12,31 @@ RIGHT=4
 LEFT=5
 
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
- 
+
+def output_volume(in_dims, k, s, p, transpose=False):
+    ''' Calculate a convolutional layer's output size from input size
+        and the layer's parameters:
+        in_dims (int or tuple): input dimensions
+        k (int or tuple): kernel size 
+        s (int or tuple): stride
+        p (int or tuple): padding 
+    '''
+    if not transpose:
+    #convolution out
+        try:
+            out_size = int(np.floor((in_dims - k + 2*p)/s + 1))
+        except:
+            out_size = tuple(int(np.floor((idid - kk + 2*pp)/ss + 1)) if ss!=0 else None for idid, kk, ss, pp in zip(in_dims,k,s,p))
+    
+    else: 
+    #deconvolution out
+        try:
+            out_size = int(np.floor((in_dims - 1)*s + k - 2*p))
+        except:
+            out_size = tuple(int(np.floor((idid - 1)*ss + kk - 2*pp)) for idid, kk, ss, pp in zip(in_dims,k,s,p))
+        
+    return out_size
+
 # preprocess a single frame
 # crop image and downsample to 80x80
 # stack two frames together as input
@@ -108,7 +132,7 @@ def collect_trajectories(envs, policy, tmax=200, nrand=5):
     # perform nrand random steps
     for _ in range(nrand):
         fr1, re1, _, _, _ = envs.step(np.random.choice([RIGHT, LEFT],n))
-        fr2, re2, _, _. _ = envs.step([0]*n)
+        fr2, re2, _, _, _ = envs.step([0]*n)
     
     for t in range(tmax):
 
@@ -174,7 +198,7 @@ def surrogate(policy, old_probs, states, actions, rewards, discount = 0.995, bet
     old_probs = torch.tensor(old_probs, dtype=torch.float, device=device)
     rewards = torch.tensor(rewards_normalized, dtype=torch.float, device=device)
 
-    # convert states to policy (or probability)
+    # convert states to policy (or probability of actions)
     new_probs = states_to_prob(policy, states)
     new_probs = torch.where(actions == RIGHT, new_probs, 1.0-new_probs)
 
@@ -241,6 +265,8 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
+# the output is the probability of moving right
+# P(left) = 1-P(right)
 class SolvedImagePolicy(nn.Module):
 
     def __init__(self):
@@ -319,8 +345,8 @@ class BarePolicy(nn.Module):
         self.size=16*9*9
         
         # 1 fully connected layer
-        self.fc1 = nn.Linear(self.size, 640)
-        self.fc2 = nn.Linear(640, 1)
+        self.fc1 = nn.Linear(self.size, 64)
+        self.fc2 = nn.Linear(64, 1)
         self.sig = nn.Sigmoid()
         
     def forward(self, x):

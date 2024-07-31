@@ -1,3 +1,9 @@
+###### 
+### gymnasium.envs.registry.keys().make 
+### includes a number of additional parameters to adding wrappers, 
+### specifying keywords to the environment and more
+###### 
+
 ###### widget bar to display progress
 !pip install progressbar
 import progressbar as pb
@@ -5,6 +11,7 @@ import progressbar as pb
 widget = ['training loop: ', pb.Percentage(), ' ', pb.Bar(), ' ', pb.ETA() ]
 
 timer = pb.ProgressBar(widgets=widget, maxval=episode).start()
+
 
 ###### Animated GIF
 import imageio
@@ -72,8 +79,7 @@ class VisualQNetwork(torch.nn.Module):
     hidden = self.dense2(hidden)
     return hidden
 
-  @staticmethod
-  def conv_output_shape(
+def conv_output_shape(
     h_w: Tuple[int, int],
     kernel_size: int = 1,
     stride: int = 1,
@@ -91,13 +97,40 @@ class VisualQNetwork(torch.nn.Module):
     )
     return h, w
 
-###### 
-
 
 ###### 
-
+def output_volume(in_dims, k, s, p, transpose=False):
+    ''' Calculate a convolutional layer's output size from input size
+        and the layer's parameters:
+        in_dims (int or tuple): input dimensions
+        k (int or tuple): kernel size 
+        s (int or tuple): stride
+        p (int or tuple): padding 
+    '''
+    if not transpose:
+    #convolution out
+        try:
+            out_size = int(np.floor((in_dims - k + 2*p)/s + 1))
+        except:
+            out_size = tuple(int(np.floor((idid - kk + 2*pp)/ss + 1)) if ss!=0 else None for idid, kk, ss, pp in zip(in_dims,k,s,p))
+    
+    else: 
+    #deconvolution out
+        try:
+            out_size = int(np.floor((in_dims - 1)*s + k - 2*p))
+        except:
+            out_size = tuple(int(np.floor((idid - 1)*ss + kk - 2*pp)) for idid, kk, ss, pp in zip(in_dims,k,s,p))
+        
+    return out_size
 
 ###### 
 
+######
+
+###### 
+
+###### 
+
+###### 
 
 ###### 
