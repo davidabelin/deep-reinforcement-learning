@@ -1,0 +1,2590 @@
+Folder PATH listing for volume OS
+Volume serial number is DA36-7F19
+C:\USERS\DAVID\DOCUMENTS\REPOSITORIES\DEEP-REINFORCEMENT-LEARNING
+¦   .gitignore
+¦   async_A2C.pdf
+¦   CODEOWNERS
+¦   CONTENTS.md
+¦   continuous_DQL.pdf
+¦   continuous_DRL.pdf
+¦   drl_tree.txt
+¦   drl_utils.py
+¦   GAE.pdf
+¦   guided_policy_search.pdf
+¦   LICENSE
+¦   ppo_algorithms.pdf
+¦   prioritized_replay.pdf
+¦   QProp.pdf
+¦   README.md
+¦   trust_region_policy_optimization.pdf
+¦   
++---.github
+¦   +---workflows
+¦           manual.yml
+¦           
++---.ipynb_checkpoints
+¦       drl_utils-checkpoint.py
+¦       pong_PPO_X-Copy1-checkpoint.ipynb
+¦       README-checkpoint.md
+¦       trust_region_policy_optimization-checkpoint.pdf
+¦       
++---.vs
+¦   ¦   PythonSettings.json
+¦   ¦   slnx.sqlite
+¦   ¦   VSWorkspaceState.json
+¦   ¦   
+¦   +---deep-reinforcement-learning
+¦       ¦   project-colors.json
+¦       ¦   
+¦       +---v17
++---class_notes
+¦   ¦   Actor-Critic+Methods+Subtitles.zip
+¦   ¦   cheatsheet.pdf
+¦   ¦   cheatsheet.tex
+¦   ¦   Introduction+to+Multi-Agent+RL+Subtitles.zip
+¦   ¦   LICENSE.txt
+¦   ¦   Navigation+Subtitles.zip
+¦   ¦   README.md
+¦   ¦   udacity-logo.png
+¦   ¦   
+¦   +---ContinuousControl_Transcripts
+¦           1 - M3L501 Introduction HS 1 V1 - lang_en.srt
+¦           10 - M3 L5 10 A3C Asynchronous Advantage ActorCritic Offpolicy Vs Onpolicy V1 - lang_en.srt
+¦           11 - M3 L5 11 A2C Advantage ActorCritic V2 - lang_en.srt
+¦           12 - A2c Export V1 - lang_en.srt
+¦           13 - M3 L5 13 GAE Generalized Advantage Estimation V2 - lang_en.srt
+¦           14 - M3 L5 14 DDPG Deep Deterministic Policy Gradient Continuous Actionspace V1 - lang_en.srt
+¦           15 - M3 L5 15 DDPG Deep Deterministic Policy Gradient Soft Updates V1 - lang_en.srt
+¦           16 - DDPG Export V1 - lang_en.srt
+¦           17 - M3L517 Summary HS 1 V1 - lang_en.srt
+¦           2 - M3 L5 02 Motivation V1 - lang_en.srt
+¦           3 - M3 L5 03 Bias And Variance V2 - lang_en.srt
+¦           4 - M3 L5 04 Two Ways For Estimating Expected Returns V3 - lang_en.srt
+¦           5 - M3 L5 05 Baselines And Critics V1 - lang_en.srt
+¦           6 - M3 L5 06 Policybased Valuebased And ActorCritic V1 - lang_en.srt
+¦           7 - M3 L5 07 A Basic ActorCritic Agent V2 - lang_en.srt
+¦           8 - M3 L5 08 A3C Asynchronous Advantage ActorCritic V2 - lang_en.srt
+¦           9 - M3 L5 09 A3C Asynchronous Advantage ActorCritic Parallel Training V2 - lang_en.srt
+¦           
++---cross-entropy
+¦   ¦   CEM.ipynb
+¦   ¦   CEM_X.ipynb
+¦   ¦   checkpoint.pth
+¦   ¦   checkpoint_cem_OG.pth
+¦   ¦   checkpoint_cem_X.pth
+¦   ¦   README.md
+¦   ¦   
+¦   +---.ipynb_checkpoints
+¦           CEM-checkpoint.ipynb
+¦           CEM_X-checkpoint.ipynb
+¦           README-checkpoint.md
+¦           
++---ddpg-bipedal
+¦   ¦   ddpg_agent_bip_X.py
+¦   ¦   ddpg_agent_bip_XX.py
+¦   ¦   DDPG_bip.ipynb
+¦   ¦   DDPG_bip_X.ipynb
+¦   ¦   DDPG_data_X.ipynb
+¦   ¦   ddpg_model_bip_X.py
+¦   ¦   ddpg_model_bip_XX.py
+¦   ¦   README.md
+¦   ¦   
+¦   +---.ipynb_checkpoints
+¦   ¦       ddpg_agent_bip_X-checkpoint.py
+¦   ¦       ddpg_agent_bip_XX-checkpoint.py
+¦   ¦       DDPG_bip-checkpoint.ipynb
+¦   ¦       DDPG_bip_X-checkpoint.ipynb
+¦   ¦       ddpg_model_bip_X-checkpoint.py
+¦   ¦       
+¦   +---data
+¦   ¦       checkpoint_actor_bip.pth
+¦   ¦       checkpoint_critic_bip.pth
+¦   ¦       highscore_actor_bip.pth
+¦   ¦       highscore_critic_bip.pth
+¦   ¦       
+¦   +---__pycache__
+¦           ddpg_agent_bip_X.cpython-36.pyc
+¦           ddpg_agent_bip_XX.cpython-36.pyc
+¦           ddpg_model_bip_X.cpython-36.pyc
+¦           ddpg_model_bip_XX.cpython-36.pyc
+¦           
++---ddpg-pendulum
+¦   ¦   checkpoint_actor.pth
+¦   ¦   checkpoint_actor_pend.pth
+¦   ¦   checkpoint_critic.pth
+¦   ¦   checkpoint_critic_pend.pth
+¦   ¦   ddpg_agent_pend.py
+¦   ¦   ddpg_model_pend.py
+¦   ¦   DDPG_pend.ipynb
+¦   ¦   DDPG_pend.py
+¦   ¦   README.md
+¦   ¦   
+¦   +---.ipynb_checkpoints
+¦   ¦       DDPG_pend-checkpoint.ipynb
+¦   ¦       
+¦   +---.vs
+¦   ¦   ¦   ProjectSettings.json
+¦   ¦   ¦   slnx.sqlite
+¦   ¦   ¦   VSWorkspaceState.json
+¦   ¦   ¦   
+¦   ¦   +---ddpg-pendulum
+¦   ¦       +---FileContentIndex
+¦   ¦       ¦   ¦   1ed45948-d1ab-4001-9800-28a3a132224a.vsidx
+¦   ¦       ¦   ¦   read.lock
+¦   ¦       ¦   ¦   
+¦   ¦       ¦   +---merges
+¦   ¦       +---v17
+¦   +---__pycache__
+¦           ddpg_agent_pend.cpython-36.pyc
+¦           ddpg_model_pend.cpython-36.pyc
+¦           
++---ddpg-reacher
+¦       ddpg_agent_reacher.py
+¦       ddpg_agent_reacher_X.py
+¦       ddpg_agent_single.py
+¦       ddpg_model_reacher.py
+¦       ddpg_model_reacher_X.py
+¦       ddpg_model_single.py
+¦       DDPG_reacher.ipynb
+¦       DDPG_reacher_X.ipynb
+¦       README.md
+¦       
++---discretization
+¦       Discretization.ipynb
+¦       Discretization_Online.ipynb
+¦       Discretization_Solution.ipynb
+¦       README.md
+¦       
++---dqn
+¦   ¦   agent.py
+¦   ¦   checkpoint.pth
+¦   ¦   checkpoint_2k.pth
+¦   ¦   Deep_Q_Network.ipynb
+¦   ¦   Deep_Q_Network_X.ipynb
+¦   ¦   dqn params.pdf
+¦   ¦   dqn_agent.py
+¦   ¦   dqn_windypoint.pth
+¦   ¦   model.py
+¦   ¦   model_X.py
+¦   ¦   qnet.py
+¦   ¦   README.md
+¦   ¦   
+¦   +---.ipynb_checkpoints
+¦   ¦       Deep_Q_Network-checkpoint.ipynb
+¦   ¦       Deep_Q_Network_X-checkpoint.ipynb
+¦   ¦       
+¦   +---__pycache__
+¦           agent.cpython-39.pyc
+¦           dqn_agent.cpython-36.pyc
+¦           dqn_agent.cpython-39.pyc
+¦           model.cpython-36.pyc
+¦           model.cpython-39.pyc
+¦           qnet.cpython-36.pyc
+¦           
++---dynamic-programming
+¦       check_test.py
+¦       Dynamic_Programming.ipynb
+¦       Dynamic_Programming_Solution.ipynb
+¦       frozenlake.py
+¦       plot_utils.py
+¦       README.md
+¦       
++---finance
+¦   ¦   ddpg_agent.py
+¦   ¦   DRL.ipynb
+¦   ¦   GeometricBrownianMotion_ Stocks.pdf
+¦   ¦   model.py
+¦   ¦   syntheticChrissAlmgren.py
+¦   ¦   utils.py
+¦   ¦   
+¦   +---text_images
+¦           4.jpeg
+¦           Actor-Critic.png
+¦           nvidia.png
+¦           RL.png
+¦           udacity.png
+¦           
++---hill-climbing
+¦       Hill_Climbing.ipynb
+¦       Hill_Climbing_X.ipynb
+¦       README.md
+¦       
++---lab-taxi
+¦       agent.py
+¦       main.py
+¦       monitor.py
+¦       README.md
+¦       
++---lunar_ddpg
+¦   ¦   action_noise.png
+¦   ¦   ddpg_agent.py
+¦   ¦   ddpg_model.py
+¦   ¦   lunar_DDPG.ipynb
+¦   ¦   lunar_ddpg.jupyterlab-workspace
+¦   ¦   Solunar_ddpg.ipynb
+¦   ¦   
+¦   +---.ipynb_checkpoints
+¦   ¦       action_noise-checkpoint.png
+¦   ¦       brilliant-checkpoint.ipynb
+¦   ¦       ddpg_agent-checkpoint.py
+¦   ¦       ddpg_model-checkpoint.py
+¦   ¦       lunar_DDPG-checkpoint.ipynb
+¦   ¦       lunar_ddpg-checkpoint.jupyterlab-workspace
+¦   ¦       Solunar_ddpg-checkpoint.ipynb
+¦   ¦       
+¦   +---data
+¦   ¦   ¦   actor_chkpnt10.pth
+¦   ¦   ¦   actor_chkpnt100.pth
+¦   ¦   ¦   actor_chkpnt1000.pth
+¦   ¦   ¦   actor_chkpnt110.pth
+¦   ¦   ¦   actor_chkpnt120.pth
+¦   ¦   ¦   actor_chkpnt130.pth
+¦   ¦   ¦   actor_chkpnt140.pth
+¦   ¦   ¦   actor_chkpnt150.pth
+¦   ¦   ¦   actor_chkpnt160.pth
+¦   ¦   ¦   actor_chkpnt170.pth
+¦   ¦   ¦   actor_chkpnt180.pth
+¦   ¦   ¦   actor_chkpnt190.pth
+¦   ¦   ¦   actor_chkpnt20.pth
+¦   ¦   ¦   actor_chkpnt200.pth
+¦   ¦   ¦   actor_chkpnt210.pth
+¦   ¦   ¦   actor_chkpnt220.pth
+¦   ¦   ¦   actor_chkpnt230.pth
+¦   ¦   ¦   actor_chkpnt240.pth
+¦   ¦   ¦   actor_chkpnt250.pth
+¦   ¦   ¦   actor_chkpnt260.pth
+¦   ¦   ¦   actor_chkpnt270.pth
+¦   ¦   ¦   actor_chkpnt280.pth
+¦   ¦   ¦   actor_chkpnt290.pth
+¦   ¦   ¦   actor_chkpnt30.pth
+¦   ¦   ¦   actor_chkpnt300.pth
+¦   ¦   ¦   actor_chkpnt310.pth
+¦   ¦   ¦   actor_chkpnt320.pth
+¦   ¦   ¦   actor_chkpnt330.pth
+¦   ¦   ¦   actor_chkpnt340.pth
+¦   ¦   ¦   actor_chkpnt350.pth
+¦   ¦   ¦   actor_chkpnt360.pth
+¦   ¦   ¦   actor_chkpnt370.pth
+¦   ¦   ¦   actor_chkpnt380.pth
+¦   ¦   ¦   actor_chkpnt390.pth
+¦   ¦   ¦   actor_chkpnt40.pth
+¦   ¦   ¦   actor_chkpnt400.pth
+¦   ¦   ¦   actor_chkpnt410.pth
+¦   ¦   ¦   actor_chkpnt420.pth
+¦   ¦   ¦   actor_chkpnt430.pth
+¦   ¦   ¦   actor_chkpnt440.pth
+¦   ¦   ¦   actor_chkpnt450.pth
+¦   ¦   ¦   actor_chkpnt460.pth
+¦   ¦   ¦   actor_chkpnt470.pth
+¦   ¦   ¦   actor_chkpnt480.pth
+¦   ¦   ¦   actor_chkpnt490.pth
+¦   ¦   ¦   actor_chkpnt50.pth
+¦   ¦   ¦   actor_chkpnt500.pth
+¦   ¦   ¦   actor_chkpnt510.pth
+¦   ¦   ¦   actor_chkpnt520.pth
+¦   ¦   ¦   actor_chkpnt530.pth
+¦   ¦   ¦   actor_chkpnt540.pth
+¦   ¦   ¦   actor_chkpnt550.pth
+¦   ¦   ¦   actor_chkpnt560.pth
+¦   ¦   ¦   actor_chkpnt570.pth
+¦   ¦   ¦   actor_chkpnt580.pth
+¦   ¦   ¦   actor_chkpnt590.pth
+¦   ¦   ¦   actor_chkpnt60.pth
+¦   ¦   ¦   actor_chkpnt600.pth
+¦   ¦   ¦   actor_chkpnt610.pth
+¦   ¦   ¦   actor_chkpnt620.pth
+¦   ¦   ¦   actor_chkpnt630.pth
+¦   ¦   ¦   actor_chkpnt640.pth
+¦   ¦   ¦   actor_chkpnt650.pth
+¦   ¦   ¦   actor_chkpnt660.pth
+¦   ¦   ¦   actor_chkpnt670.pth
+¦   ¦   ¦   actor_chkpnt680.pth
+¦   ¦   ¦   actor_chkpnt690.pth
+¦   ¦   ¦   actor_chkpnt70.pth
+¦   ¦   ¦   actor_chkpnt700.pth
+¦   ¦   ¦   actor_chkpnt710.pth
+¦   ¦   ¦   actor_chkpnt720.pth
+¦   ¦   ¦   actor_chkpnt730.pth
+¦   ¦   ¦   actor_chkpnt740.pth
+¦   ¦   ¦   actor_chkpnt750.pth
+¦   ¦   ¦   actor_chkpnt760.pth
+¦   ¦   ¦   actor_chkpnt770.pth
+¦   ¦   ¦   actor_chkpnt780.pth
+¦   ¦   ¦   actor_chkpnt790.pth
+¦   ¦   ¦   actor_chkpnt80.pth
+¦   ¦   ¦   actor_chkpnt800.pth
+¦   ¦   ¦   actor_chkpnt810.pth
+¦   ¦   ¦   actor_chkpnt820.pth
+¦   ¦   ¦   actor_chkpnt830.pth
+¦   ¦   ¦   actor_chkpnt840.pth
+¦   ¦   ¦   actor_chkpnt850.pth
+¦   ¦   ¦   actor_chkpnt860.pth
+¦   ¦   ¦   actor_chkpnt870.pth
+¦   ¦   ¦   actor_chkpnt880.pth
+¦   ¦   ¦   actor_chkpnt890.pth
+¦   ¦   ¦   actor_chkpnt90.pth
+¦   ¦   ¦   actor_chkpnt900.pth
+¦   ¦   ¦   actor_chkpnt910.pth
+¦   ¦   ¦   actor_chkpnt920.pth
+¦   ¦   ¦   actor_chkpnt930.pth
+¦   ¦   ¦   actor_chkpnt940.pth
+¦   ¦   ¦   actor_chkpnt950.pth
+¦   ¦   ¦   actor_chkpnt960.pth
+¦   ¦   ¦   actor_chkpnt970.pth
+¦   ¦   ¦   actor_chkpnt980.pth
+¦   ¦   ¦   actor_chkpnt990.pth
+¦   ¦   ¦   critic_chkpnt10.pth
+¦   ¦   ¦   critic_chkpnt100.pth
+¦   ¦   ¦   critic_chkpnt1000.pth
+¦   ¦   ¦   critic_chkpnt110.pth
+¦   ¦   ¦   critic_chkpnt120.pth
+¦   ¦   ¦   critic_chkpnt130.pth
+¦   ¦   ¦   critic_chkpnt140.pth
+¦   ¦   ¦   critic_chkpnt150.pth
+¦   ¦   ¦   critic_chkpnt160.pth
+¦   ¦   ¦   critic_chkpnt170.pth
+¦   ¦   ¦   critic_chkpnt180.pth
+¦   ¦   ¦   critic_chkpnt190.pth
+¦   ¦   ¦   critic_chkpnt20.pth
+¦   ¦   ¦   critic_chkpnt200.pth
+¦   ¦   ¦   critic_chkpnt210.pth
+¦   ¦   ¦   critic_chkpnt220.pth
+¦   ¦   ¦   critic_chkpnt230.pth
+¦   ¦   ¦   critic_chkpnt240.pth
+¦   ¦   ¦   critic_chkpnt250.pth
+¦   ¦   ¦   critic_chkpnt260.pth
+¦   ¦   ¦   critic_chkpnt270.pth
+¦   ¦   ¦   critic_chkpnt280.pth
+¦   ¦   ¦   critic_chkpnt290.pth
+¦   ¦   ¦   critic_chkpnt30.pth
+¦   ¦   ¦   critic_chkpnt300.pth
+¦   ¦   ¦   critic_chkpnt310.pth
+¦   ¦   ¦   critic_chkpnt320.pth
+¦   ¦   ¦   critic_chkpnt330.pth
+¦   ¦   ¦   critic_chkpnt340.pth
+¦   ¦   ¦   critic_chkpnt350.pth
+¦   ¦   ¦   critic_chkpnt360.pth
+¦   ¦   ¦   critic_chkpnt370.pth
+¦   ¦   ¦   critic_chkpnt380.pth
+¦   ¦   ¦   critic_chkpnt390.pth
+¦   ¦   ¦   critic_chkpnt40.pth
+¦   ¦   ¦   critic_chkpnt400.pth
+¦   ¦   ¦   critic_chkpnt410.pth
+¦   ¦   ¦   critic_chkpnt420.pth
+¦   ¦   ¦   critic_chkpnt430.pth
+¦   ¦   ¦   critic_chkpnt440.pth
+¦   ¦   ¦   critic_chkpnt450.pth
+¦   ¦   ¦   critic_chkpnt460.pth
+¦   ¦   ¦   critic_chkpnt470.pth
+¦   ¦   ¦   critic_chkpnt480.pth
+¦   ¦   ¦   critic_chkpnt490.pth
+¦   ¦   ¦   critic_chkpnt50.pth
+¦   ¦   ¦   critic_chkpnt500.pth
+¦   ¦   ¦   critic_chkpnt510.pth
+¦   ¦   ¦   critic_chkpnt520.pth
+¦   ¦   ¦   critic_chkpnt530.pth
+¦   ¦   ¦   critic_chkpnt540.pth
+¦   ¦   ¦   critic_chkpnt550.pth
+¦   ¦   ¦   critic_chkpnt560.pth
+¦   ¦   ¦   critic_chkpnt570.pth
+¦   ¦   ¦   critic_chkpnt580.pth
+¦   ¦   ¦   critic_chkpnt590.pth
+¦   ¦   ¦   critic_chkpnt60.pth
+¦   ¦   ¦   critic_chkpnt600.pth
+¦   ¦   ¦   critic_chkpnt610.pth
+¦   ¦   ¦   critic_chkpnt620.pth
+¦   ¦   ¦   critic_chkpnt630.pth
+¦   ¦   ¦   critic_chkpnt640.pth
+¦   ¦   ¦   critic_chkpnt650.pth
+¦   ¦   ¦   critic_chkpnt660.pth
+¦   ¦   ¦   critic_chkpnt670.pth
+¦   ¦   ¦   critic_chkpnt680.pth
+¦   ¦   ¦   critic_chkpnt690.pth
+¦   ¦   ¦   critic_chkpnt70.pth
+¦   ¦   ¦   critic_chkpnt700.pth
+¦   ¦   ¦   critic_chkpnt710.pth
+¦   ¦   ¦   critic_chkpnt720.pth
+¦   ¦   ¦   critic_chkpnt730.pth
+¦   ¦   ¦   critic_chkpnt740.pth
+¦   ¦   ¦   critic_chkpnt750.pth
+¦   ¦   ¦   critic_chkpnt760.pth
+¦   ¦   ¦   critic_chkpnt770.pth
+¦   ¦   ¦   critic_chkpnt780.pth
+¦   ¦   ¦   critic_chkpnt790.pth
+¦   ¦   ¦   critic_chkpnt80.pth
+¦   ¦   ¦   critic_chkpnt800.pth
+¦   ¦   ¦   critic_chkpnt810.pth
+¦   ¦   ¦   critic_chkpnt820.pth
+¦   ¦   ¦   critic_chkpnt830.pth
+¦   ¦   ¦   critic_chkpnt840.pth
+¦   ¦   ¦   critic_chkpnt850.pth
+¦   ¦   ¦   critic_chkpnt860.pth
+¦   ¦   ¦   critic_chkpnt870.pth
+¦   ¦   ¦   critic_chkpnt880.pth
+¦   ¦   ¦   critic_chkpnt890.pth
+¦   ¦   ¦   critic_chkpnt90.pth
+¦   ¦   ¦   critic_chkpnt900.pth
+¦   ¦   ¦   critic_chkpnt910.pth
+¦   ¦   ¦   critic_chkpnt920.pth
+¦   ¦   ¦   critic_chkpnt930.pth
+¦   ¦   ¦   critic_chkpnt940.pth
+¦   ¦   ¦   critic_chkpnt950.pth
+¦   ¦   ¦   critic_chkpnt960.pth
+¦   ¦   ¦   critic_chkpnt970.pth
+¦   ¦   ¦   critic_chkpnt980.pth
+¦   ¦   ¦   critic_chkpnt990.pth
+¦   ¦   ¦   retraining_actor.pth
+¦   ¦   ¦   retraining_critic.pth
+¦   ¦   ¦   trained_actor.pth
+¦   ¦   ¦   trained_critic.pth
+¦   ¦   ¦   
+¦   ¦   +---.ipynb_checkpoints
+¦   +---deleteable
+¦   ¦   ¦   ddpg_agent_lunar.py
+¦   ¦   ¦   ddpg_model_lunar.py
+¦   ¦   ¦   failedEnv.py
+¦   ¦   ¦   FailedSolution.ipynb
+¦   ¦   ¦   failed_agents.py
+¦   ¦   ¦   model-Copy1.py
+¦   ¦   ¦   
+¦   ¦   +---.ipynb_checkpoints
+¦   ¦           ddpg_agent_lunar-checkpoint.py
+¦   ¦           ddpg_model_lunar-checkpoint.py
+¦   ¦           failedEnv-checkpoint.py
+¦   ¦           FailedSolution-checkpoint.ipynb
+¦   ¦           failed_agents-checkpoint.py
+¦   ¦           model-Copy1-checkpoint.py
+¦   ¦           
+¦   +---__pycache__
+¦           agents.cpython-39.pyc
+¦           ddpg_agent.cpython-39.pyc
+¦           ddpg_agent_lunar.cpython-39.pyc
+¦           ddpg_agent_solution.cpython-39.pyc
+¦           ddpg_model.cpython-39.pyc
+¦           ddpg_model_lunar.cpython-39.pyc
+¦           model.cpython-39.pyc
+¦           parallelEnv.cpython-39.pyc
+¦           
++---lunar_dqn
+¦   ¦   agent_W.py
+¦   ¦   checkpoint.pth
+¦   ¦   DQN_agent.py
+¦   ¦   DQN_PR_agent.py
+¦   ¦   DQN_utils.py
+¦   ¦   LL_DQN.py
+¦   ¦   lunar_doubleDQN.ipynb
+¦   ¦   lunar_DQN.ipynb
+¦   ¦   lunar_dqn.jupyterlab-workspace
+¦   ¦   lunar_DQN_PR.ipynb
+¦   ¦   lunar_DQN_W.ipynb
+¦   ¦   Q_network.py
+¦   ¦   workingfiles_colab_DQN.zip
+¦   ¦   
+¦   +---.ipynb_checkpoints
+¦   ¦       agent-checkpoint.py
+¦   ¦       agent_W-checkpoint.py
+¦   ¦       DQN_agent-checkpoint.py
+¦   ¦       DQN_PR_agent-checkpoint.py
+¦   ¦       DQN_utils-checkpoint.py
+¦   ¦       LL_DQN-checkpoint.py
+¦   ¦       lunar_doubleDQN-checkpoint.ipynb
+¦   ¦       lunar_DQN-checkpoint.ipynb
+¦   ¦       lunar_DQN_PR-checkpoint.ipynb
+¦   ¦       lunar_DQN_Solution-checkpoint.ipynb
+¦   ¦       lunar_DQN_W-checkpoint.ipynb
+¦   ¦       model-checkpoint.py
+¦   ¦       Q_network-checkpoint.py
+¦   ¦       
+¦   +---data
+¦   ¦   ¦   chkpnt100.pth
+¦   ¦   ¦   chkpnt1000.pth
+¦   ¦   ¦   chkpnt1100.pth
+¦   ¦   ¦   chkpnt1200.pth
+¦   ¦   ¦   chkpnt200.pth
+¦   ¦   ¦   chkpnt300.pth
+¦   ¦   ¦   chkpnt400.pth
+¦   ¦   ¦   chkpnt500.pth
+¦   ¦   ¦   chkpnt600.pth
+¦   ¦   ¦   chkpnt700.pth
+¦   ¦   ¦   chkpnt800.pth
+¦   ¦   ¦   chkpnt900.pth
+¦   ¦   ¦   hipnt_X.pth
+¦   ¦   ¦   local_hipnt.pth
+¦   ¦   ¦   local_slvdpnt.pth
+¦   ¦   ¦   qn_local_chkpnt100.pth
+¦   ¦   ¦   qn_local_chkpnt1000.pth
+¦   ¦   ¦   qn_local_chkpnt200.pth
+¦   ¦   ¦   qn_local_chkpnt300.pth
+¦   ¦   ¦   qn_local_chkpnt400.pth
+¦   ¦   ¦   qn_local_chkpnt500.pth
+¦   ¦   ¦   qn_local_chkpnt600.pth
+¦   ¦   ¦   qn_local_chkpnt700.pth
+¦   ¦   ¦   qn_local_chkpnt800.pth
+¦   ¦   ¦   qn_local_chkpnt900.pth
+¦   ¦   ¦   qn_target_chkpnt100.pth
+¦   ¦   ¦   qn_target_chkpnt1000.pth
+¦   ¦   ¦   qn_target_chkpnt200.pth
+¦   ¦   ¦   qn_target_chkpnt300.pth
+¦   ¦   ¦   qn_target_chkpnt400.pth
+¦   ¦   ¦   qn_target_chkpnt500.pth
+¦   ¦   ¦   qn_target_chkpnt600.pth
+¦   ¦   ¦   qn_target_chkpnt700.pth
+¦   ¦   ¦   qn_target_chkpnt800.pth
+¦   ¦   ¦   qn_target_chkpnt900.pth
+¦   ¦   ¦   slvdpnt.pth
+¦   ¦   ¦   slvdpnt_X.pth
+¦   ¦   ¦   target_hipnt.pth
+¦   ¦   ¦   target_slvdpnt.pth
+¦   ¦   ¦   
+¦   ¦   +---.ipynb_checkpoints
+¦   +---wandb
+¦   ¦   ¦   config_foo.py
+¦   ¦   ¦   DQN_agent.py
+¦   ¦   ¦   DQN_utils.py
+¦   ¦   ¦   lunar_DQN_WandB.ipynb
+¦   ¦   ¦   Q_network.py
+¦   ¦   ¦   
+¦   ¦   +---.ipynb_checkpoints
+¦   ¦   ¦       config_foo-checkpoint.py
+¦   ¦   ¦       DQN_agent-checkpoint.py
+¦   ¦   ¦       DQN_utils-checkpoint.py
+¦   ¦   ¦       lunar_DQN_WandB-checkpoint.ipynb
+¦   ¦   ¦       
+¦   ¦   +---run-20230407_120800-n7g829xb
+¦   ¦       ¦   run-n7g829xb.wandb
+¦   ¦       ¦   
+¦   ¦       +---files
+¦   ¦       ¦       conda-environment.yaml
+¦   ¦       ¦       config.yaml
+¦   ¦       ¦       requirements.txt
+¦   ¦       ¦       wandb-metadata.json
+¦   ¦       ¦       wandb-summary.json
+¦   ¦       ¦       
+¦   ¦       +---logs
+¦   ¦       ¦       debug-internal.log
+¦   ¦       ¦       debug.log
+¦   ¦       ¦       
+¦   ¦       +---tmp
+¦   ¦           +---code
+¦   +---__pycache__
+¦           agent.cpython-39.pyc
+¦           agent_W.cpython-39.pyc
+¦           DQN_agent.cpython-39.pyc
+¦           DQN_PR_agent.cpython-39.pyc
+¦           DQN_utils.cpython-39.pyc
+¦           model.cpython-39.pyc
+¦           model_W.cpython-39.pyc
+¦           Q_network.cpython-39.pyc
+¦           
++---lunar_dqn2ddpg
+¦   ¦   agents.py
+¦   ¦   lunar_DDPG.ipynb
+¦   ¦   lunar_dqn2ddpg.jupyterlab-workspace
+¦   ¦   models.py
+¦   ¦   utils.py
+¦   ¦   
+¦   +---.ipynb_checkpoints
+¦   ¦       agents-checkpoint.py
+¦   ¦       lunar_DDPG-checkpoint.ipynb
+¦   ¦       models-checkpoint.py
+¦   ¦       utils-checkpoint.py
+¦   ¦       
+¦   +---data
+¦   ¦       actor_chkpnt100.pth
+¦   ¦       actor_chkpnt1000.pth
+¦   ¦       actor_chkpnt200.pth
+¦   ¦       actor_chkpnt300.pth
+¦   ¦       actor_chkpnt400.pth
+¦   ¦       actor_chkpnt500.pth
+¦   ¦       actor_chkpnt600.pth
+¦   ¦       actor_chkpnt700.pth
+¦   ¦       actor_chkpnt800.pth
+¦   ¦       actor_chkpnt900.pth
+¦   ¦       critic_chkpnt100.pth
+¦   ¦       critic_chkpnt1000.pth
+¦   ¦       critic_chkpnt200.pth
+¦   ¦       critic_chkpnt300.pth
+¦   ¦       critic_chkpnt400.pth
+¦   ¦       critic_chkpnt500.pth
+¦   ¦       critic_chkpnt600.pth
+¦   ¦       critic_chkpnt700.pth
+¦   ¦       critic_chkpnt800.pth
+¦   ¦       critic_chkpnt900.pth
+¦   ¦       
+¦   +---__pycache__
+¦           agents.cpython-39.pyc
+¦           models.cpython-39.pyc
+¦           utils.cpython-39.pyc
+¦           
++---lunar_ppo
+¦   ¦   formulas.md
+¦   ¦   lunar_doublePPO.ipynb
+¦   ¦   lunar_parallel_DQN.ipynb
+¦   ¦   lunar_PPO.ipynb
+¦   ¦   lunar_ppo.jupyterlab-workspace
+¦   ¦   lunar_PPO_utils.py
+¦   ¦   parallelEnv.py
+¦   ¦   parallelEnv_PPO.py
+¦   ¦   pong_utils.py
+¦   ¦   surrogate_fxns.py
+¦   ¦   
+¦   +---.ipynb_checkpoints
+¦   ¦       formulas-checkpoint.md
+¦   ¦       lunar_doublePPO-checkpoint.ipynb
+¦   ¦       lunar_parallel_DQN-checkpoint.ipynb
+¦   ¦       lunar_PPO-checkpoint.ipynb
+¦   ¦       lunar_ppo-checkpoint.jupyterlab-workspace
+¦   ¦       lunar_PPO_utils-checkpoint.py
+¦   ¦       parallelEnv-checkpoint.py
+¦   ¦       parallelEnv_PPO-checkpoint.py
+¦   ¦       surrogate_fxns-checkpoint.py
+¦   ¦       
+¦   +---__pycache__
+¦           lunar_PPO_utils.cpython-39.pyc
+¦           parallelEnv.cpython-39.pyc
+¦           parallelEnv_PPO.cpython-39.pyc
+¦           surrogate_fxns.cpython-39.pyc
+¦           
++---monte-carlo
+¦   ¦   Monte_Carlo.ipynb
+¦   ¦   Monte_Carlo_Solution.ipynb
+¦   ¦   plot_utils.py
+¦   ¦   README.md
+¦   ¦   
+¦   +---.ipynb_checkpoints
+¦   ¦       Monte_Carlo_Solution-checkpoint.ipynb
+¦   ¦       
+¦   +---images
+¦           optimal.png
+¦           
++---p1_navigation
+¦   ¦   Banana_Linux.zip
+¦   ¦   Banana_NoVis.zip
+¦   ¦   Banana_Windows_x86_64.zip
+¦   ¦   DeepQNetworks_Nature.pdf
+¦   ¦   highpoint.pth
+¦   ¦   Navigation_bup.ipynb
+¦   ¦   Navigation_OG.ipynb
+¦   ¦   Navigation_Pixels.ipynb
+¦   ¦   p1_navigation.zip
+¦   ¦   python_env.zip
+¦   ¦   README.md
+¦   ¦   VisualBanana_Linux.zip
+¦   ¦   
+¦   +---P1_Navigation
+¦   ¦   ¦   benchmark_weights.pth
+¦   ¦   ¦   dqn_agent.py
+¦   ¦   ¦   dqn_solution.ipynb
+¦   ¦   ¦   model.py
+¦   ¦   ¦   Navigation.ipynb
+¦   ¦   ¦   README.md
+¦   ¦   ¦   Report.ipynb
+¦   ¦   ¦   trained_weights.pth
+¦   ¦   ¦   unity-environment.log
+¦   ¦   ¦   
+¦   ¦   +---.ipynb_checkpoints
+¦   ¦   ¦       dqn_agent-checkpoint.py
+¦   ¦   ¦       Navigation-checkpoint.ipynb
+¦   ¦   ¦       Report-checkpoint.ipynb
+¦   ¦   ¦       
+¦   ¦   +---Banana_Windows_x86_64
+¦   ¦   ¦   ¦   Banana.exe
+¦   ¦   ¦   ¦   UnityPlayer.dll
+¦   ¦   ¦   ¦   
+¦   ¦   ¦   +---Banana_Data
+¦   ¦   ¦       ¦   app.info
+¦   ¦   ¦       ¦   boot.config
+¦   ¦   ¦       ¦   globalgamemanagers
+¦   ¦   ¦       ¦   globalgamemanagers.assets
+¦   ¦   ¦       ¦   level0
+¦   ¦   ¦       ¦   sharedassets0.assets
+¦   ¦   ¦       ¦   sharedassets0.assets.resS
+¦   ¦   ¦       ¦   
+¦   ¦   ¦       +---GI
+¦   ¦   ¦       ¦   +---level0
+¦   ¦   ¦       ¦       +---d8
+¦   ¦   ¦       ¦               d879d8f84dad702b137146d9028aad2c.caw
+¦   ¦   ¦       ¦               d879d8f84dad702b137146d9028aad2c.ecm
+¦   ¦   ¦       ¦               d879d8f84dad702b137146d9028aad2c.iws.sse
+¦   ¦   ¦       ¦               d879d8f84dad702b137146d9028aad2c.rgb
+¦   ¦   ¦       ¦               d879d8f84dad702b137146d9028aad2c.rsc.sse
+¦   ¦   ¦       ¦               d879d8f84dad702b137146d9028aad2c.vis
+¦   ¦   ¦       ¦               
+¦   ¦   ¦       +---Managed
+¦   ¦   ¦       ¦       Assembly-CSharp.dll
+¦   ¦   ¦       ¦       Google.Protobuf.dll
+¦   ¦   ¦       ¦       Grpc.Core.dll
+¦   ¦   ¦       ¦       Mono.Posix.dll
+¦   ¦   ¦       ¦       Mono.Security.dll
+¦   ¦   ¦       ¦       mscorlib.dll
+¦   ¦   ¦       ¦       System.Configuration.dll
+¦   ¦   ¦       ¦       System.Core.dll
+¦   ¦   ¦       ¦       System.dll
+¦   ¦   ¦       ¦       System.Interactive.Async.dll
+¦   ¦   ¦       ¦       System.Security.dll
+¦   ¦   ¦       ¦       System.Xml.dll
+¦   ¦   ¦       ¦       UnityEngine.AccessibilityModule.dll
+¦   ¦   ¦       ¦       UnityEngine.AIModule.dll
+¦   ¦   ¦       ¦       UnityEngine.AnimationModule.dll
+¦   ¦   ¦       ¦       UnityEngine.ARModule.dll
+¦   ¦   ¦       ¦       UnityEngine.AssetBundleModule.dll
+¦   ¦   ¦       ¦       UnityEngine.AudioModule.dll
+¦   ¦   ¦       ¦       UnityEngine.ClothModule.dll
+¦   ¦   ¦       ¦       UnityEngine.ClusterInputModule.dll
+¦   ¦   ¦       ¦       UnityEngine.ClusterRendererModule.dll
+¦   ¦   ¦       ¦       UnityEngine.CoreModule.dll
+¦   ¦   ¦       ¦       UnityEngine.CrashReportingModule.dll
+¦   ¦   ¦       ¦       UnityEngine.DirectorModule.dll
+¦   ¦   ¦       ¦       UnityEngine.dll
+¦   ¦   ¦       ¦       UnityEngine.GameCenterModule.dll
+¦   ¦   ¦       ¦       UnityEngine.GridModule.dll
+¦   ¦   ¦       ¦       UnityEngine.ImageConversionModule.dll
+¦   ¦   ¦       ¦       UnityEngine.IMGUIModule.dll
+¦   ¦   ¦       ¦       UnityEngine.InputModule.dll
+¦   ¦   ¦       ¦       UnityEngine.JSONSerializeModule.dll
+¦   ¦   ¦       ¦       UnityEngine.Networking.dll
+¦   ¦   ¦       ¦       UnityEngine.ParticlesLegacyModule.dll
+¦   ¦   ¦       ¦       UnityEngine.ParticleSystemModule.dll
+¦   ¦   ¦       ¦       UnityEngine.PerformanceReportingModule.dll
+¦   ¦   ¦       ¦       UnityEngine.Physics2DModule.dll
+¦   ¦   ¦       ¦       UnityEngine.PhysicsModule.dll
+¦   ¦   ¦       ¦       UnityEngine.ScreenCaptureModule.dll
+¦   ¦   ¦       ¦       UnityEngine.SharedInternalsModule.dll
+¦   ¦   ¦       ¦       UnityEngine.SpatialTracking.dll
+¦   ¦   ¦       ¦       UnityEngine.SpriteMaskModule.dll
+¦   ¦   ¦       ¦       UnityEngine.SpriteShapeModule.dll
+¦   ¦   ¦       ¦       UnityEngine.StandardEvents.dll
+¦   ¦   ¦       ¦       UnityEngine.StyleSheetsModule.dll
+¦   ¦   ¦       ¦       UnityEngine.TerrainModule.dll
+¦   ¦   ¦       ¦       UnityEngine.TerrainPhysicsModule.dll
+¦   ¦   ¦       ¦       UnityEngine.TextRenderingModule.dll
+¦   ¦   ¦       ¦       UnityEngine.TilemapModule.dll
+¦   ¦   ¦       ¦       UnityEngine.Timeline.dll
+¦   ¦   ¦       ¦       UnityEngine.UI.dll
+¦   ¦   ¦       ¦       UnityEngine.UIElementsModule.dll
+¦   ¦   ¦       ¦       UnityEngine.UIModule.dll
+¦   ¦   ¦       ¦       UnityEngine.UNETModule.dll
+¦   ¦   ¦       ¦       UnityEngine.UnityAnalyticsModule.dll
+¦   ¦   ¦       ¦       UnityEngine.UnityConnectModule.dll
+¦   ¦   ¦       ¦       UnityEngine.UnityWebRequestAudioModule.dll
+¦   ¦   ¦       ¦       UnityEngine.UnityWebRequestModule.dll
+¦   ¦   ¦       ¦       UnityEngine.UnityWebRequestTextureModule.dll
+¦   ¦   ¦       ¦       UnityEngine.UnityWebRequestWWWModule.dll
+¦   ¦   ¦       ¦       UnityEngine.VehiclesModule.dll
+¦   ¦   ¦       ¦       UnityEngine.VideoModule.dll
+¦   ¦   ¦       ¦       UnityEngine.VRModule.dll
+¦   ¦   ¦       ¦       UnityEngine.WebModule.dll
+¦   ¦   ¦       ¦       UnityEngine.WindModule.dll
+¦   ¦   ¦       ¦       
+¦   ¦   ¦       +---MonoBleedingEdge
+¦   ¦   ¦       ¦   +---EmbedRuntime
+¦   ¦   ¦       ¦   ¦       mono-2.0-bdwgc.dll
+¦   ¦   ¦       ¦   ¦       MonoPosixHelper.dll
+¦   ¦   ¦       ¦   ¦       
+¦   ¦   ¦       ¦   +---etc
+¦   ¦   ¦       ¦       +---mono
+¦   ¦   ¦       ¦           ¦   browscap.ini
+¦   ¦   ¦       ¦           ¦   config
+¦   ¦   ¦       ¦           ¦   
+¦   ¦   ¦       ¦           +---2.0
+¦   ¦   ¦       ¦           ¦   ¦   DefaultWsdlHelpGenerator.aspx
+¦   ¦   ¦       ¦           ¦   ¦   machine.config
+¦   ¦   ¦       ¦           ¦   ¦   settings.map
+¦   ¦   ¦       ¦           ¦   ¦   web.config
+¦   ¦   ¦       ¦           ¦   ¦   
+¦   ¦   ¦       ¦           ¦   +---Browsers
+¦   ¦   ¦       ¦           ¦           Compat.browser
+¦   ¦   ¦       ¦           ¦           
+¦   ¦   ¦       ¦           +---4.0
+¦   ¦   ¦       ¦           ¦   ¦   DefaultWsdlHelpGenerator.aspx
+¦   ¦   ¦       ¦           ¦   ¦   machine.config
+¦   ¦   ¦       ¦           ¦   ¦   settings.map
+¦   ¦   ¦       ¦           ¦   ¦   web.config
+¦   ¦   ¦       ¦           ¦   ¦   
+¦   ¦   ¦       ¦           ¦   +---Browsers
+¦   ¦   ¦       ¦           ¦           Compat.browser
+¦   ¦   ¦       ¦           ¦           
+¦   ¦   ¦       ¦           +---4.5
+¦   ¦   ¦       ¦           ¦   ¦   DefaultWsdlHelpGenerator.aspx
+¦   ¦   ¦       ¦           ¦   ¦   machine.config
+¦   ¦   ¦       ¦           ¦   ¦   settings.map
+¦   ¦   ¦       ¦           ¦   ¦   web.config
+¦   ¦   ¦       ¦           ¦   ¦   
+¦   ¦   ¦       ¦           ¦   +---Browsers
+¦   ¦   ¦       ¦           ¦           Compat.browser
+¦   ¦   ¦       ¦           ¦           
+¦   ¦   ¦       ¦           +---mconfig
+¦   ¦   ¦       ¦                   config.xml
+¦   ¦   ¦       ¦                   
+¦   ¦   ¦       +---Plugins
+¦   ¦   ¦       ¦       grpc_csharp_ext.x64.dll
+¦   ¦   ¦       ¦       
+¦   ¦   ¦       +---Resources
+¦   ¦   ¦               unity default resources
+¦   ¦   ¦               unity_builtin_extra
+¦   ¦   ¦               
+¦   ¦   +---python
+¦   ¦   ¦   ¦   Basics.ipynb
+¦   ¦   ¦   ¦   learn.py
+¦   ¦   ¦   ¦   README.md
+¦   ¦   ¦   ¦   requirements.txt
+¦   ¦   ¦   ¦   setup.py
+¦   ¦   ¦   ¦   trainer_config.yaml
+¦   ¦   ¦   ¦   
+¦   ¦   ¦   +---communicator_objects
+¦   ¦   ¦   ¦       agent_action_proto_pb2.py
+¦   ¦   ¦   ¦       agent_info_proto_pb2.py
+¦   ¦   ¦   ¦       brain_parameters_proto_pb2.py
+¦   ¦   ¦   ¦       brain_type_proto_pb2.py
+¦   ¦   ¦   ¦       command_proto_pb2.py
+¦   ¦   ¦   ¦       engine_configuration_proto_pb2.py
+¦   ¦   ¦   ¦       environment_parameters_proto_pb2.py
+¦   ¦   ¦   ¦       header_pb2.py
+¦   ¦   ¦   ¦       resolution_proto_pb2.py
+¦   ¦   ¦   ¦       space_type_proto_pb2.py
+¦   ¦   ¦   ¦       unity_input_pb2.py
+¦   ¦   ¦   ¦       unity_message_pb2.py
+¦   ¦   ¦   ¦       unity_output_pb2.py
+¦   ¦   ¦   ¦       unity_rl_initialization_input_pb2.py
+¦   ¦   ¦   ¦       unity_rl_initialization_output_pb2.py
+¦   ¦   ¦   ¦       unity_rl_input_pb2.py
+¦   ¦   ¦   ¦       unity_rl_output_pb2.py
+¦   ¦   ¦   ¦       unity_to_external_pb2.py
+¦   ¦   ¦   ¦       unity_to_external_pb2_grpc.py
+¦   ¦   ¦   ¦       __init__.py
+¦   ¦   ¦   ¦       
+¦   ¦   ¦   +---curricula
+¦   ¦   ¦   ¦       push.json
+¦   ¦   ¦   ¦       test.json
+¦   ¦   ¦   ¦       wall.json
+¦   ¦   ¦   ¦       
+¦   ¦   ¦   +---tests
+¦   ¦   ¦   ¦       mock_communicator.py
+¦   ¦   ¦   ¦       test_bc.py
+¦   ¦   ¦   ¦       test_ppo.py
+¦   ¦   ¦   ¦       test_unityagents.py
+¦   ¦   ¦   ¦       test_unitytrainers.py
+¦   ¦   ¦   ¦       __init__.py
+¦   ¦   ¦   ¦       
+¦   ¦   ¦   +---unityagents
+¦   ¦   ¦   ¦       brain.py
+¦   ¦   ¦   ¦       communicator.py
+¦   ¦   ¦   ¦       curriculum.py
+¦   ¦   ¦   ¦       environment.py
+¦   ¦   ¦   ¦       exception.py
+¦   ¦   ¦   ¦       rpc_communicator.py
+¦   ¦   ¦   ¦       socket_communicator.py
+¦   ¦   ¦   ¦       __init__.py
+¦   ¦   ¦   ¦       
+¦   ¦   ¦   +---unitytrainers
+¦   ¦   ¦       ¦   buffer.py
+¦   ¦   ¦       ¦   models.py
+¦   ¦   ¦       ¦   trainer.py
+¦   ¦   ¦       ¦   trainer_controller.py
+¦   ¦   ¦       ¦   __init__.py
+¦   ¦   ¦       ¦   
+¦   ¦   ¦       +---bc
+¦   ¦   ¦       ¦       models.py
+¦   ¦   ¦       ¦       trainer.py
+¦   ¦   ¦       ¦       __init__.py
+¦   ¦   ¦       ¦       
+¦   ¦   ¦       +---ppo
+¦   ¦   ¦               models.py
+¦   ¦   ¦               trainer.py
+¦   ¦   ¦               __init__.py
+¦   ¦   ¦               
+¦   ¦   +---__pycache__
+¦   ¦           dqn_agent.cpython-36.pyc
+¦   ¦           dqn_agent.cpython-39.pyc
+¦   ¦           model.cpython-36.pyc
+¦   ¦           model.cpython-39.pyc
+¦   ¦           
+¦   +---Value-based-methods
+¦       ¦   .DS_Store
+¦       ¦   LICENSE.md
+¦       ¦   README.md
+¦       ¦   
+¦       +---.github
+¦       ¦   +---workflows
+¦       ¦           manual.yml
+¦       ¦           
+¦       +---cheatsheet
+¦       ¦       cheatsheet.pdf
+¦       ¦       cheatsheet.tex
+¦       ¦       LICENSE.txt
+¦       ¦       README.md
+¦       ¦       udacity-logo.png
+¦       ¦       
+¦       +---dqn
+¦       ¦   ¦   README.md
+¦       ¦   ¦   
+¦       ¦   +---exercise
+¦       ¦   ¦       Deep_Q_Network.ipynb
+¦       ¦   ¦       dqn_agent.py
+¦       ¦   ¦       model.py
+¦       ¦   ¦       
+¦       ¦   +---solution
+¦       ¦           checkpoint.pth
+¦       ¦           Deep_Q_Network_Solution.ipynb
+¦       ¦           dqn_agent.py
+¦       ¦           model.py
+¦       ¦           
+¦       +---p1_navigation
+¦       ¦   ¦   checkpoint.pth
+¦       ¦   ¦   Navigation.ipynb
+¦       ¦   ¦   Navigation_Pixels.ipynb
+¦       ¦   ¦   Navigation_uspace.ipynb
+¦       ¦   ¦   README.md
+¦       ¦   ¦   requirements.txt
+¦       ¦   ¦   unity-environment.log
+¦       ¦   ¦   
+¦       ¦   +---Banana_Windows_x86_64
+¦       ¦       ¦   Banana.exe
+¦       ¦       ¦   UnityPlayer.dll
+¦       ¦       ¦   
+¦       ¦       +---Banana_Data
+¦       ¦           ¦   app.info
+¦       ¦           ¦   boot.config
+¦       ¦           ¦   globalgamemanagers
+¦       ¦           ¦   globalgamemanagers.assets
+¦       ¦           ¦   level0
+¦       ¦           ¦   sharedassets0.assets
+¦       ¦           ¦   sharedassets0.assets.resS
+¦       ¦           ¦   
+¦       ¦           +---GI
+¦       ¦           ¦   +---level0
+¦       ¦           ¦       +---d8
+¦       ¦           ¦               d879d8f84dad702b137146d9028aad2c.caw
+¦       ¦           ¦               d879d8f84dad702b137146d9028aad2c.ecm
+¦       ¦           ¦               d879d8f84dad702b137146d9028aad2c.iws.sse
+¦       ¦           ¦               d879d8f84dad702b137146d9028aad2c.rgb
+¦       ¦           ¦               d879d8f84dad702b137146d9028aad2c.rsc.sse
+¦       ¦           ¦               d879d8f84dad702b137146d9028aad2c.vis
+¦       ¦           ¦               
+¦       ¦           +---Managed
+¦       ¦           ¦       Assembly-CSharp.dll
+¦       ¦           ¦       Google.Protobuf.dll
+¦       ¦           ¦       Grpc.Core.dll
+¦       ¦           ¦       Mono.Posix.dll
+¦       ¦           ¦       Mono.Security.dll
+¦       ¦           ¦       mscorlib.dll
+¦       ¦           ¦       System.Configuration.dll
+¦       ¦           ¦       System.Core.dll
+¦       ¦           ¦       System.dll
+¦       ¦           ¦       System.Interactive.Async.dll
+¦       ¦           ¦       System.Security.dll
+¦       ¦           ¦       System.Xml.dll
+¦       ¦           ¦       UnityEngine.AccessibilityModule.dll
+¦       ¦           ¦       UnityEngine.AIModule.dll
+¦       ¦           ¦       UnityEngine.AnimationModule.dll
+¦       ¦           ¦       UnityEngine.ARModule.dll
+¦       ¦           ¦       UnityEngine.AssetBundleModule.dll
+¦       ¦           ¦       UnityEngine.AudioModule.dll
+¦       ¦           ¦       UnityEngine.ClothModule.dll
+¦       ¦           ¦       UnityEngine.ClusterInputModule.dll
+¦       ¦           ¦       UnityEngine.ClusterRendererModule.dll
+¦       ¦           ¦       UnityEngine.CoreModule.dll
+¦       ¦           ¦       UnityEngine.CrashReportingModule.dll
+¦       ¦           ¦       UnityEngine.DirectorModule.dll
+¦       ¦           ¦       UnityEngine.dll
+¦       ¦           ¦       UnityEngine.GameCenterModule.dll
+¦       ¦           ¦       UnityEngine.GridModule.dll
+¦       ¦           ¦       UnityEngine.ImageConversionModule.dll
+¦       ¦           ¦       UnityEngine.IMGUIModule.dll
+¦       ¦           ¦       UnityEngine.InputModule.dll
+¦       ¦           ¦       UnityEngine.JSONSerializeModule.dll
+¦       ¦           ¦       UnityEngine.Networking.dll
+¦       ¦           ¦       UnityEngine.ParticlesLegacyModule.dll
+¦       ¦           ¦       UnityEngine.ParticleSystemModule.dll
+¦       ¦           ¦       UnityEngine.PerformanceReportingModule.dll
+¦       ¦           ¦       UnityEngine.Physics2DModule.dll
+¦       ¦           ¦       UnityEngine.PhysicsModule.dll
+¦       ¦           ¦       UnityEngine.ScreenCaptureModule.dll
+¦       ¦           ¦       UnityEngine.SharedInternalsModule.dll
+¦       ¦           ¦       UnityEngine.SpatialTracking.dll
+¦       ¦           ¦       UnityEngine.SpriteMaskModule.dll
+¦       ¦           ¦       UnityEngine.SpriteShapeModule.dll
+¦       ¦           ¦       UnityEngine.StandardEvents.dll
+¦       ¦           ¦       UnityEngine.StyleSheetsModule.dll
+¦       ¦           ¦       UnityEngine.TerrainModule.dll
+¦       ¦           ¦       UnityEngine.TerrainPhysicsModule.dll
+¦       ¦           ¦       UnityEngine.TextRenderingModule.dll
+¦       ¦           ¦       UnityEngine.TilemapModule.dll
+¦       ¦           ¦       UnityEngine.Timeline.dll
+¦       ¦           ¦       UnityEngine.UI.dll
+¦       ¦           ¦       UnityEngine.UIElementsModule.dll
+¦       ¦           ¦       UnityEngine.UIModule.dll
+¦       ¦           ¦       UnityEngine.UNETModule.dll
+¦       ¦           ¦       UnityEngine.UnityAnalyticsModule.dll
+¦       ¦           ¦       UnityEngine.UnityConnectModule.dll
+¦       ¦           ¦       UnityEngine.UnityWebRequestAudioModule.dll
+¦       ¦           ¦       UnityEngine.UnityWebRequestModule.dll
+¦       ¦           ¦       UnityEngine.UnityWebRequestTextureModule.dll
+¦       ¦           ¦       UnityEngine.UnityWebRequestWWWModule.dll
+¦       ¦           ¦       UnityEngine.VehiclesModule.dll
+¦       ¦           ¦       UnityEngine.VideoModule.dll
+¦       ¦           ¦       UnityEngine.VRModule.dll
+¦       ¦           ¦       UnityEngine.WebModule.dll
+¦       ¦           ¦       UnityEngine.WindModule.dll
+¦       ¦           ¦       
+¦       ¦           +---MonoBleedingEdge
+¦       ¦           ¦   +---EmbedRuntime
+¦       ¦           ¦   ¦       mono-2.0-bdwgc.dll
+¦       ¦           ¦   ¦       MonoPosixHelper.dll
+¦       ¦           ¦   ¦       
+¦       ¦           ¦   +---etc
+¦       ¦           ¦       +---mono
+¦       ¦           ¦           ¦   browscap.ini
+¦       ¦           ¦           ¦   config
+¦       ¦           ¦           ¦   
+¦       ¦           ¦           +---2.0
+¦       ¦           ¦           ¦   ¦   DefaultWsdlHelpGenerator.aspx
+¦       ¦           ¦           ¦   ¦   machine.config
+¦       ¦           ¦           ¦   ¦   settings.map
+¦       ¦           ¦           ¦   ¦   web.config
+¦       ¦           ¦           ¦   ¦   
+¦       ¦           ¦           ¦   +---Browsers
+¦       ¦           ¦           ¦           Compat.browser
+¦       ¦           ¦           ¦           
+¦       ¦           ¦           +---4.0
+¦       ¦           ¦           ¦   ¦   DefaultWsdlHelpGenerator.aspx
+¦       ¦           ¦           ¦   ¦   machine.config
+¦       ¦           ¦           ¦   ¦   settings.map
+¦       ¦           ¦           ¦   ¦   web.config
+¦       ¦           ¦           ¦   ¦   
+¦       ¦           ¦           ¦   +---Browsers
+¦       ¦           ¦           ¦           Compat.browser
+¦       ¦           ¦           ¦           
+¦       ¦           ¦           +---4.5
+¦       ¦           ¦           ¦   ¦   DefaultWsdlHelpGenerator.aspx
+¦       ¦           ¦           ¦   ¦   machine.config
+¦       ¦           ¦           ¦   ¦   settings.map
+¦       ¦           ¦           ¦   ¦   web.config
+¦       ¦           ¦           ¦   ¦   
+¦       ¦           ¦           ¦   +---Browsers
+¦       ¦           ¦           ¦           Compat.browser
+¦       ¦           ¦           ¦           
+¦       ¦           ¦           +---mconfig
+¦       ¦           ¦                   config.xml
+¦       ¦           ¦                   
+¦       ¦           +---Plugins
+¦       ¦           ¦       grpc_csharp_ext.x64.dll
+¦       ¦           ¦       
+¦       ¦           +---Resources
+¦       ¦                   unity default resources
+¦       ¦                   unity_builtin_extra
+¦       ¦                   
+¦       +---python
+¦           ¦   Basics.ipynb
+¦           ¦   learn.py
+¦           ¦   README.md
+¦           ¦   requirements.txt
+¦           ¦   setup.py
+¦           ¦   trainer_config.yaml
+¦           ¦   
+¦           +---communicator_objects
+¦           ¦       agent_action_proto_pb2.py
+¦           ¦       agent_info_proto_pb2.py
+¦           ¦       brain_parameters_proto_pb2.py
+¦           ¦       brain_type_proto_pb2.py
+¦           ¦       command_proto_pb2.py
+¦           ¦       engine_configuration_proto_pb2.py
+¦           ¦       environment_parameters_proto_pb2.py
+¦           ¦       header_pb2.py
+¦           ¦       resolution_proto_pb2.py
+¦           ¦       space_type_proto_pb2.py
+¦           ¦       unity_input_pb2.py
+¦           ¦       unity_message_pb2.py
+¦           ¦       unity_output_pb2.py
+¦           ¦       unity_rl_initialization_input_pb2.py
+¦           ¦       unity_rl_initialization_output_pb2.py
+¦           ¦       unity_rl_input_pb2.py
+¦           ¦       unity_rl_output_pb2.py
+¦           ¦       unity_to_external_pb2.py
+¦           ¦       unity_to_external_pb2_grpc.py
+¦           ¦       __init__.py
+¦           ¦       
+¦           +---curricula
+¦           ¦       push.json
+¦           ¦       test.json
+¦           ¦       wall.json
+¦           ¦       
+¦           +---tests
+¦           ¦       mock_communicator.py
+¦           ¦       test_bc.py
+¦           ¦       test_ppo.py
+¦           ¦       test_unityagents.py
+¦           ¦       test_unitytrainers.py
+¦           ¦       __init__.py
+¦           ¦       
+¦           +---unityagents
+¦           ¦       brain.py
+¦           ¦       communicator.py
+¦           ¦       curriculum.py
+¦           ¦       environment.py
+¦           ¦       exception.py
+¦           ¦       rpc_communicator.py
+¦           ¦       socket_communicator.py
+¦           ¦       __init__.py
+¦           ¦       
+¦           +---unitytrainers
+¦               ¦   buffer.py
+¦               ¦   models.py
+¦               ¦   trainer.py
+¦               ¦   trainer_controller.py
+¦               ¦   __init__.py
+¦               ¦   
+¦               +---bc
+¦               ¦       models.py
+¦               ¦       trainer.py
+¦               ¦       __init__.py
+¦               ¦       
+¦               +---ppo
+¦                       models.py
+¦                       trainer.py
+¦                       __init__.py
+¦                       
++---p2_continuous-control
+¦   ¦   Continuous_Control.ipynb
+¦   ¦   Continuous_Control_OG.ipynb
+¦   ¦   Continuous_Control_X.ipynb
+¦   ¦   README.md
+¦   ¦   requirements.txt
+¦   ¦   Tile_Coding_Acrobat.ipynb
+¦   ¦   unity-environment.log
+¦   ¦   
+¦   +---.ipynb_checkpoints
+¦   ¦       CC1_DDPG-checkpoint.ipynb
+¦   ¦       Continuous_Control-checkpoint.ipynb
+¦   ¦       Continuous_Control_OG-checkpoint.ipynb
+¦   ¦       Continuous_Control_X-checkpoint.ipynb
+¦   ¦       README-checkpoint.md
+¦   ¦       Tile_Coding_Acrobat-checkpoint.ipynb
+¦   ¦       
+¦   +---.vs
+¦   ¦   ¦   ProjectSettings.json
+¦   ¦   ¦   slnx.sqlite
+¦   ¦   ¦   VSWorkspaceState.json
+¦   ¦   ¦   
+¦   ¦   +---p2_continuous-control
+¦   ¦       +---FileContentIndex
+¦   ¦       ¦   ¦   ac5ec0b1-fbae-4b70-bfab-37484d77fdf3.vsidx
+¦   ¦       ¦   ¦   e85a8831-03b8-4c46-a36e-15903b374633.vsidx
+¦   ¦       ¦   ¦   read.lock
+¦   ¦       ¦   ¦   
+¦   ¦       ¦   +---merges
+¦   ¦       +---v17
+¦   +---data
+¦   ¦   ¦   actions.csv
+¦   ¦   ¦   dones.csv
+¦   ¦   ¦   next_st.csv
+¦   ¦   ¦   rewards.csv
+¦   ¦   ¦   states.csv
+¦   ¦   ¦   steps.csv
+¦   ¦   ¦   
+¦   ¦   +---.ipynb_checkpoints
+¦   ¦   +---Reacher1_Win
+¦   ¦   ¦   ¦   Reacher.exe
+¦   ¦   ¦   ¦   UnityPlayer.dll
+¦   ¦   ¦   ¦   
+¦   ¦   ¦   +---Reacher_Data
+¦   ¦   ¦       ¦   app.info
+¦   ¦   ¦       ¦   boot.config
+¦   ¦   ¦       ¦   globalgamemanagers
+¦   ¦   ¦       ¦   globalgamemanagers.assets
+¦   ¦   ¦       ¦   level0
+¦   ¦   ¦       ¦   level0.resS
+¦   ¦   ¦       ¦   resources.assets
+¦   ¦   ¦       ¦   sharedassets0.assets
+¦   ¦   ¦       ¦   
+¦   ¦   ¦       +---Managed
+¦   ¦   ¦       ¦       Assembly-CSharp.dll
+¦   ¦   ¦       ¦       Google.Protobuf.dll
+¦   ¦   ¦       ¦       Grpc.Core.dll
+¦   ¦   ¦       ¦       Mono.Posix.dll
+¦   ¦   ¦       ¦       Mono.Security.dll
+¦   ¦   ¦       ¦       mscorlib.dll
+¦   ¦   ¦       ¦       System.Configuration.dll
+¦   ¦   ¦       ¦       System.Core.dll
+¦   ¦   ¦       ¦       System.dll
+¦   ¦   ¦       ¦       System.Interactive.Async.dll
+¦   ¦   ¦       ¦       System.Security.dll
+¦   ¦   ¦       ¦       System.Xml.dll
+¦   ¦   ¦       ¦       UnityEngine.AccessibilityModule.dll
+¦   ¦   ¦       ¦       UnityEngine.AIModule.dll
+¦   ¦   ¦       ¦       UnityEngine.AnimationModule.dll
+¦   ¦   ¦       ¦       UnityEngine.ARModule.dll
+¦   ¦   ¦       ¦       UnityEngine.AssetBundleModule.dll
+¦   ¦   ¦       ¦       UnityEngine.AudioModule.dll
+¦   ¦   ¦       ¦       UnityEngine.ClothModule.dll
+¦   ¦   ¦       ¦       UnityEngine.ClusterInputModule.dll
+¦   ¦   ¦       ¦       UnityEngine.ClusterRendererModule.dll
+¦   ¦   ¦       ¦       UnityEngine.CoreModule.dll
+¦   ¦   ¦       ¦       UnityEngine.CrashReportingModule.dll
+¦   ¦   ¦       ¦       UnityEngine.DirectorModule.dll
+¦   ¦   ¦       ¦       UnityEngine.dll
+¦   ¦   ¦       ¦       UnityEngine.GameCenterModule.dll
+¦   ¦   ¦       ¦       UnityEngine.GridModule.dll
+¦   ¦   ¦       ¦       UnityEngine.ImageConversionModule.dll
+¦   ¦   ¦       ¦       UnityEngine.IMGUIModule.dll
+¦   ¦   ¦       ¦       UnityEngine.InputModule.dll
+¦   ¦   ¦       ¦       UnityEngine.JSONSerializeModule.dll
+¦   ¦   ¦       ¦       UnityEngine.Networking.dll
+¦   ¦   ¦       ¦       UnityEngine.ParticlesLegacyModule.dll
+¦   ¦   ¦       ¦       UnityEngine.ParticleSystemModule.dll
+¦   ¦   ¦       ¦       UnityEngine.PerformanceReportingModule.dll
+¦   ¦   ¦       ¦       UnityEngine.Physics2DModule.dll
+¦   ¦   ¦       ¦       UnityEngine.PhysicsModule.dll
+¦   ¦   ¦       ¦       UnityEngine.ScreenCaptureModule.dll
+¦   ¦   ¦       ¦       UnityEngine.SharedInternalsModule.dll
+¦   ¦   ¦       ¦       UnityEngine.SpatialTracking.dll
+¦   ¦   ¦       ¦       UnityEngine.SpriteMaskModule.dll
+¦   ¦   ¦       ¦       UnityEngine.SpriteShapeModule.dll
+¦   ¦   ¦       ¦       UnityEngine.StandardEvents.dll
+¦   ¦   ¦       ¦       UnityEngine.StyleSheetsModule.dll
+¦   ¦   ¦       ¦       UnityEngine.TerrainModule.dll
+¦   ¦   ¦       ¦       UnityEngine.TerrainPhysicsModule.dll
+¦   ¦   ¦       ¦       UnityEngine.TextRenderingModule.dll
+¦   ¦   ¦       ¦       UnityEngine.TilemapModule.dll
+¦   ¦   ¦       ¦       UnityEngine.Timeline.dll
+¦   ¦   ¦       ¦       UnityEngine.UI.dll
+¦   ¦   ¦       ¦       UnityEngine.UIElementsModule.dll
+¦   ¦   ¦       ¦       UnityEngine.UIModule.dll
+¦   ¦   ¦       ¦       UnityEngine.UNETModule.dll
+¦   ¦   ¦       ¦       UnityEngine.UnityAnalyticsModule.dll
+¦   ¦   ¦       ¦       UnityEngine.UnityConnectModule.dll
+¦   ¦   ¦       ¦       UnityEngine.UnityWebRequestAudioModule.dll
+¦   ¦   ¦       ¦       UnityEngine.UnityWebRequestModule.dll
+¦   ¦   ¦       ¦       UnityEngine.UnityWebRequestTextureModule.dll
+¦   ¦   ¦       ¦       UnityEngine.UnityWebRequestWWWModule.dll
+¦   ¦   ¦       ¦       UnityEngine.VehiclesModule.dll
+¦   ¦   ¦       ¦       UnityEngine.VideoModule.dll
+¦   ¦   ¦       ¦       UnityEngine.VRModule.dll
+¦   ¦   ¦       ¦       UnityEngine.WebModule.dll
+¦   ¦   ¦       ¦       UnityEngine.WindModule.dll
+¦   ¦   ¦       ¦       
+¦   ¦   ¦       +---MonoBleedingEdge
+¦   ¦   ¦       ¦   +---EmbedRuntime
+¦   ¦   ¦       ¦   ¦       mono-2.0-bdwgc.dll
+¦   ¦   ¦       ¦   ¦       MonoPosixHelper.dll
+¦   ¦   ¦       ¦   ¦       
+¦   ¦   ¦       ¦   +---etc
+¦   ¦   ¦       ¦       +---mono
+¦   ¦   ¦       ¦           ¦   browscap.ini
+¦   ¦   ¦       ¦           ¦   config
+¦   ¦   ¦       ¦           ¦   
+¦   ¦   ¦       ¦           +---2.0
+¦   ¦   ¦       ¦           ¦   ¦   DefaultWsdlHelpGenerator.aspx
+¦   ¦   ¦       ¦           ¦   ¦   machine.config
+¦   ¦   ¦       ¦           ¦   ¦   settings.map
+¦   ¦   ¦       ¦           ¦   ¦   web.config
+¦   ¦   ¦       ¦           ¦   ¦   
+¦   ¦   ¦       ¦           ¦   +---Browsers
+¦   ¦   ¦       ¦           ¦           Compat.browser
+¦   ¦   ¦       ¦           ¦           
+¦   ¦   ¦       ¦           +---4.0
+¦   ¦   ¦       ¦           ¦   ¦   DefaultWsdlHelpGenerator.aspx
+¦   ¦   ¦       ¦           ¦   ¦   machine.config
+¦   ¦   ¦       ¦           ¦   ¦   settings.map
+¦   ¦   ¦       ¦           ¦   ¦   web.config
+¦   ¦   ¦       ¦           ¦   ¦   
+¦   ¦   ¦       ¦           ¦   +---Browsers
+¦   ¦   ¦       ¦           ¦           Compat.browser
+¦   ¦   ¦       ¦           ¦           
+¦   ¦   ¦       ¦           +---4.5
+¦   ¦   ¦       ¦           ¦   ¦   DefaultWsdlHelpGenerator.aspx
+¦   ¦   ¦       ¦           ¦   ¦   machine.config
+¦   ¦   ¦       ¦           ¦   ¦   settings.map
+¦   ¦   ¦       ¦           ¦   ¦   web.config
+¦   ¦   ¦       ¦           ¦   ¦   
+¦   ¦   ¦       ¦           ¦   +---Browsers
+¦   ¦   ¦       ¦           ¦           Compat.browser
+¦   ¦   ¦       ¦           ¦           
+¦   ¦   ¦       ¦           +---mconfig
+¦   ¦   ¦       ¦                   config.xml
+¦   ¦   ¦       ¦                   
+¦   ¦   ¦       +---Plugins
+¦   ¦   ¦       ¦       grpc_csharp_ext.x64.dll
+¦   ¦   ¦       ¦       
+¦   ¦   ¦       +---Resources
+¦   ¦   ¦               unity default resources
+¦   ¦   ¦               unity_builtin_extra
+¦   ¦   ¦               
+¦   ¦   +---Reacher20_Win
+¦   ¦       ¦   Reacher.exe
+¦   ¦       ¦   Reacher.sln
+¦   ¦       ¦   UnityPlayer.dll
+¦   ¦       ¦   
+¦   ¦       +---Reacher_Data
+¦   ¦           ¦   app.info
+¦   ¦           ¦   boot.config
+¦   ¦           ¦   globalgamemanagers
+¦   ¦           ¦   globalgamemanagers.assets
+¦   ¦           ¦   level0
+¦   ¦           ¦   level0.resS
+¦   ¦           ¦   resources.assets
+¦   ¦           ¦   sharedassets0.assets
+¦   ¦           ¦   
+¦   ¦           +---.ipynb_checkpoints
+¦   ¦           ¦       boot-checkpoint.config
+¦   ¦           ¦       
+¦   ¦           +---Managed
+¦   ¦           ¦       Assembly-CSharp.dll
+¦   ¦           ¦       Google.Protobuf.dll
+¦   ¦           ¦       Grpc.Core.dll
+¦   ¦           ¦       Mono.Posix.dll
+¦   ¦           ¦       Mono.Security.dll
+¦   ¦           ¦       mscorlib.dll
+¦   ¦           ¦       System.Configuration.dll
+¦   ¦           ¦       System.Core.dll
+¦   ¦           ¦       System.dll
+¦   ¦           ¦       System.Interactive.Async.dll
+¦   ¦           ¦       System.Security.dll
+¦   ¦           ¦       System.Xml.dll
+¦   ¦           ¦       UnityEngine.AccessibilityModule.dll
+¦   ¦           ¦       UnityEngine.AIModule.dll
+¦   ¦           ¦       UnityEngine.AnimationModule.dll
+¦   ¦           ¦       UnityEngine.ARModule.dll
+¦   ¦           ¦       UnityEngine.AssetBundleModule.dll
+¦   ¦           ¦       UnityEngine.AudioModule.dll
+¦   ¦           ¦       UnityEngine.ClothModule.dll
+¦   ¦           ¦       UnityEngine.ClusterInputModule.dll
+¦   ¦           ¦       UnityEngine.ClusterRendererModule.dll
+¦   ¦           ¦       UnityEngine.CoreModule.dll
+¦   ¦           ¦       UnityEngine.CrashReportingModule.dll
+¦   ¦           ¦       UnityEngine.DirectorModule.dll
+¦   ¦           ¦       UnityEngine.dll
+¦   ¦           ¦       UnityEngine.GameCenterModule.dll
+¦   ¦           ¦       UnityEngine.GridModule.dll
+¦   ¦           ¦       UnityEngine.ImageConversionModule.dll
+¦   ¦           ¦       UnityEngine.IMGUIModule.dll
+¦   ¦           ¦       UnityEngine.InputModule.dll
+¦   ¦           ¦       UnityEngine.JSONSerializeModule.dll
+¦   ¦           ¦       UnityEngine.Networking.dll
+¦   ¦           ¦       UnityEngine.ParticlesLegacyModule.dll
+¦   ¦           ¦       UnityEngine.ParticleSystemModule.dll
+¦   ¦           ¦       UnityEngine.PerformanceReportingModule.dll
+¦   ¦           ¦       UnityEngine.Physics2DModule.dll
+¦   ¦           ¦       UnityEngine.PhysicsModule.dll
+¦   ¦           ¦       UnityEngine.ScreenCaptureModule.dll
+¦   ¦           ¦       UnityEngine.SharedInternalsModule.dll
+¦   ¦           ¦       UnityEngine.SpatialTracking.dll
+¦   ¦           ¦       UnityEngine.SpriteMaskModule.dll
+¦   ¦           ¦       UnityEngine.SpriteShapeModule.dll
+¦   ¦           ¦       UnityEngine.StandardEvents.dll
+¦   ¦           ¦       UnityEngine.StyleSheetsModule.dll
+¦   ¦           ¦       UnityEngine.TerrainModule.dll
+¦   ¦           ¦       UnityEngine.TerrainPhysicsModule.dll
+¦   ¦           ¦       UnityEngine.TextRenderingModule.dll
+¦   ¦           ¦       UnityEngine.TilemapModule.dll
+¦   ¦           ¦       UnityEngine.Timeline.dll
+¦   ¦           ¦       UnityEngine.UI.dll
+¦   ¦           ¦       UnityEngine.UIElementsModule.dll
+¦   ¦           ¦       UnityEngine.UIModule.dll
+¦   ¦           ¦       UnityEngine.UNETModule.dll
+¦   ¦           ¦       UnityEngine.UnityAnalyticsModule.dll
+¦   ¦           ¦       UnityEngine.UnityConnectModule.dll
+¦   ¦           ¦       UnityEngine.UnityWebRequestAudioModule.dll
+¦   ¦           ¦       UnityEngine.UnityWebRequestModule.dll
+¦   ¦           ¦       UnityEngine.UnityWebRequestTextureModule.dll
+¦   ¦           ¦       UnityEngine.UnityWebRequestWWWModule.dll
+¦   ¦           ¦       UnityEngine.VehiclesModule.dll
+¦   ¦           ¦       UnityEngine.VideoModule.dll
+¦   ¦           ¦       UnityEngine.VRModule.dll
+¦   ¦           ¦       UnityEngine.WebModule.dll
+¦   ¦           ¦       UnityEngine.WindModule.dll
+¦   ¦           ¦       
+¦   ¦           +---MonoBleedingEdge
+¦   ¦           ¦   +---EmbedRuntime
+¦   ¦           ¦   ¦       mono-2.0-bdwgc.dll
+¦   ¦           ¦   ¦       MonoPosixHelper.dll
+¦   ¦           ¦   ¦       
+¦   ¦           ¦   +---etc
+¦   ¦           ¦       +---mono
+¦   ¦           ¦           ¦   browscap.ini
+¦   ¦           ¦           ¦   config
+¦   ¦           ¦           ¦   
+¦   ¦           ¦           +---2.0
+¦   ¦           ¦           ¦   ¦   DefaultWsdlHelpGenerator.aspx
+¦   ¦           ¦           ¦   ¦   machine.config
+¦   ¦           ¦           ¦   ¦   settings.map
+¦   ¦           ¦           ¦   ¦   web.config
+¦   ¦           ¦           ¦   ¦   
+¦   ¦           ¦           ¦   +---Browsers
+¦   ¦           ¦           ¦           Compat.browser
+¦   ¦           ¦           ¦           
+¦   ¦           ¦           +---4.0
+¦   ¦           ¦           ¦   ¦   DefaultWsdlHelpGenerator.aspx
+¦   ¦           ¦           ¦   ¦   machine.config
+¦   ¦           ¦           ¦   ¦   settings.map
+¦   ¦           ¦           ¦   ¦   web.config
+¦   ¦           ¦           ¦   ¦   
+¦   ¦           ¦           ¦   +---Browsers
+¦   ¦           ¦           ¦           Compat.browser
+¦   ¦           ¦           ¦           
+¦   ¦           ¦           +---4.5
+¦   ¦           ¦           ¦   ¦   DefaultWsdlHelpGenerator.aspx
+¦   ¦           ¦           ¦   ¦   machine.config
+¦   ¦           ¦           ¦   ¦   settings.map
+¦   ¦           ¦           ¦   ¦   web.config
+¦   ¦           ¦           ¦   ¦   
+¦   ¦           ¦           ¦   +---Browsers
+¦   ¦           ¦           ¦           Compat.browser
+¦   ¦           ¦           ¦           
+¦   ¦           ¦           +---mconfig
+¦   ¦           ¦                   config.xml
+¦   ¦           ¦                   
+¦   ¦           +---Plugins
+¦   ¦           ¦       grpc_csharp_ext.x64.dll
+¦   ¦           ¦       
+¦   ¦           +---Resources
+¦   ¦                   unity default resources
+¦   ¦                   unity_builtin_extra
+¦   ¦                   
+¦   +---ddpg
+¦   ¦   ¦   ddpg_agent.py
+¦   ¦   ¦   ddpg_model.py
+¦   ¦   ¦   ddpg_train.py
+¦   ¦   ¦   Reacher.ipynb
+¦   ¦   ¦   trained_actor_1.pth
+¦   ¦   ¦   trained_actor_20.pth
+¦   ¦   ¦   trained_critic_1.pth
+¦   ¦   ¦   trained_critic_20.pth
+¦   ¦   ¦   unity-environment.log
+¦   ¦   ¦   
+¦   ¦   +---.ipynb_checkpoints
+¦   ¦   ¦       ddpg_agent-checkpoint.py
+¦   ¦   ¦       ddpg_model-checkpoint.py
+¦   ¦   ¦       ddpg_train-checkpoint.py
+¦   ¦   ¦       Reacher-checkpoint.ipynb
+¦   ¦   ¦       
+¦   ¦   +---checkpoints
+¦   ¦   ¦       actor_chkpnt10.pth
+¦   ¦   ¦       actor_chkpnt20.pth
+¦   ¦   ¦       actor_chkpnt30.pth
+¦   ¦   ¦       actor_slvdpnt.pth
+¦   ¦   ¦       actor_trained.pth
+¦   ¦   ¦       actor_training_chkpnt10.pth
+¦   ¦   ¦       actor_training_chkpnt100.pth
+¦   ¦   ¦       actor_training_chkpnt105.pth
+¦   ¦   ¦       actor_training_chkpnt110.pth
+¦   ¦   ¦       actor_training_chkpnt115.pth
+¦   ¦   ¦       actor_training_chkpnt120.pth
+¦   ¦   ¦       actor_training_chkpnt125.pth
+¦   ¦   ¦       actor_training_chkpnt130.pth
+¦   ¦   ¦       actor_training_chkpnt135.pth
+¦   ¦   ¦       actor_training_chkpnt140.pth
+¦   ¦   ¦       actor_training_chkpnt145.pth
+¦   ¦   ¦       actor_training_chkpnt15.pth
+¦   ¦   ¦       actor_training_chkpnt150.pth
+¦   ¦   ¦       actor_training_chkpnt160.pth
+¦   ¦   ¦       actor_training_chkpnt180.pth
+¦   ¦   ¦       actor_training_chkpnt20.pth
+¦   ¦   ¦       actor_training_chkpnt200.pth
+¦   ¦   ¦       actor_training_chkpnt220.pth
+¦   ¦   ¦       actor_training_chkpnt240.pth
+¦   ¦   ¦       actor_training_chkpnt25.pth
+¦   ¦   ¦       actor_training_chkpnt260.pth
+¦   ¦   ¦       actor_training_chkpnt280.pth
+¦   ¦   ¦       actor_training_chkpnt30.pth
+¦   ¦   ¦       actor_training_chkpnt300.pth
+¦   ¦   ¦       actor_training_chkpnt35.pth
+¦   ¦   ¦       actor_training_chkpnt40.pth
+¦   ¦   ¦       actor_training_chkpnt45.pth
+¦   ¦   ¦       actor_training_chkpnt5.pth
+¦   ¦   ¦       actor_training_chkpnt50.pth
+¦   ¦   ¦       actor_training_chkpnt55.pth
+¦   ¦   ¦       actor_training_chkpnt60.pth
+¦   ¦   ¦       actor_training_chkpnt65.pth
+¦   ¦   ¦       actor_training_chkpnt70.pth
+¦   ¦   ¦       actor_training_chkpnt75.pth
+¦   ¦   ¦       actor_training_chkpnt80.pth
+¦   ¦   ¦       actor_training_chkpnt85.pth
+¦   ¦   ¦       actor_training_chkpnt90.pth
+¦   ¦   ¦       actor_training_chkpnt95.pth
+¦   ¦   ¦       best_actor.pth
+¦   ¦   ¦       best_critic.pth
+¦   ¦   ¦       criticA_trained.pth
+¦   ¦   ¦       critic_chkpnt10.pth
+¦   ¦   ¦       critic_chkpnt20.pth
+¦   ¦   ¦       critic_chkpnt30.pth
+¦   ¦   ¦       critic_slvdpnt.pth
+¦   ¦   ¦       critic_trained.pth
+¦   ¦   ¦       critic_training_chkpnt10.pth
+¦   ¦   ¦       critic_training_chkpnt100.pth
+¦   ¦   ¦       critic_training_chkpnt105.pth
+¦   ¦   ¦       critic_training_chkpnt110.pth
+¦   ¦   ¦       critic_training_chkpnt115.pth
+¦   ¦   ¦       critic_training_chkpnt120.pth
+¦   ¦   ¦       critic_training_chkpnt125.pth
+¦   ¦   ¦       critic_training_chkpnt130.pth
+¦   ¦   ¦       critic_training_chkpnt135.pth
+¦   ¦   ¦       critic_training_chkpnt140.pth
+¦   ¦   ¦       critic_training_chkpnt145.pth
+¦   ¦   ¦       critic_training_chkpnt15.pth
+¦   ¦   ¦       critic_training_chkpnt150.pth
+¦   ¦   ¦       critic_training_chkpnt160.pth
+¦   ¦   ¦       critic_training_chkpnt180.pth
+¦   ¦   ¦       critic_training_chkpnt20.pth
+¦   ¦   ¦       critic_training_chkpnt200.pth
+¦   ¦   ¦       critic_training_chkpnt220.pth
+¦   ¦   ¦       critic_training_chkpnt240.pth
+¦   ¦   ¦       critic_training_chkpnt25.pth
+¦   ¦   ¦       critic_training_chkpnt260.pth
+¦   ¦   ¦       critic_training_chkpnt280.pth
+¦   ¦   ¦       critic_training_chkpnt30.pth
+¦   ¦   ¦       critic_training_chkpnt300.pth
+¦   ¦   ¦       critic_training_chkpnt35.pth
+¦   ¦   ¦       critic_training_chkpnt40.pth
+¦   ¦   ¦       critic_training_chkpnt45.pth
+¦   ¦   ¦       critic_training_chkpnt5.pth
+¦   ¦   ¦       critic_training_chkpnt50.pth
+¦   ¦   ¦       critic_training_chkpnt55.pth
+¦   ¦   ¦       critic_training_chkpnt60.pth
+¦   ¦   ¦       critic_training_chkpnt65.pth
+¦   ¦   ¦       critic_training_chkpnt70.pth
+¦   ¦   ¦       critic_training_chkpnt75.pth
+¦   ¦   ¦       critic_training_chkpnt80.pth
+¦   ¦   ¦       critic_training_chkpnt85.pth
+¦   ¦   ¦       critic_training_chkpnt90.pth
+¦   ¦   ¦       critic_training_chkpnt95.pth
+¦   ¦   ¦       slvdpnt_actor.pth
+¦   ¦   ¦       slvdpnt_critic.pth
+¦   ¦   ¦       slvdpnt_criticA.pth
+¦   ¦   ¦       trained_actor.pth
+¦   ¦   ¦       trained_actor256.pth
+¦   ¦   ¦       trained_actor_btch128.pth
+¦   ¦   ¦       trained_actor_btch64.pth
+¦   ¦   ¦       trained_critic.pth
+¦   ¦   ¦       trained_critic256.pth
+¦   ¦   ¦       trained_critic_btch128.pth
+¦   ¦   ¦       trained_critic_btch64.pth
+¦   ¦   ¦       
+¦   ¦   +---clutter
+¦   ¦   ¦   ¦   CC20_DDPG.ipynb
+¦   ¦   ¦   ¦   ddpg_agent_bip.py
+¦   ¦   ¦   ¦   ddpg_agent_original.py
+¦   ¦   ¦   ¦   ddpg_lost_agent.py
+¦   ¦   ¦   ¦   ddpg_lost_model.py
+¦   ¦   ¦   ¦   
+¦   ¦   ¦   +---.ipynb_checkpoints
+¦   ¦   ¦           CC20_DDPG-checkpoint.ipynb
+¦   ¦   ¦           ddpg_lost_agent-checkpoint.py
+¦   ¦   ¦           ddpg_lost_model-checkpoint.py
+¦   ¦   ¦           
+¦   ¦   +---UnityReacher20
+¦   ¦   ¦   ¦   Reacher.exe
+¦   ¦   ¦   ¦   UnityPlayer.dll
+¦   ¦   ¦   ¦   
+¦   ¦   ¦   +---Reacher_Data
+¦   ¦   ¦       ¦   app.info
+¦   ¦   ¦       ¦   boot.config
+¦   ¦   ¦       ¦   globalgamemanagers
+¦   ¦   ¦       ¦   globalgamemanagers.assets
+¦   ¦   ¦       ¦   level0
+¦   ¦   ¦       ¦   level0.resS
+¦   ¦   ¦       ¦   resources.assets
+¦   ¦   ¦       ¦   sharedassets0.assets
+¦   ¦   ¦       ¦   
+¦   ¦   ¦       +---.ipynb_checkpoints
+¦   ¦   ¦       ¦       boot-checkpoint.config
+¦   ¦   ¦       ¦       
+¦   ¦   ¦       +---Managed
+¦   ¦   ¦       ¦       Assembly-CSharp.dll
+¦   ¦   ¦       ¦       Google.Protobuf.dll
+¦   ¦   ¦       ¦       Grpc.Core.dll
+¦   ¦   ¦       ¦       Mono.Posix.dll
+¦   ¦   ¦       ¦       Mono.Security.dll
+¦   ¦   ¦       ¦       mscorlib.dll
+¦   ¦   ¦       ¦       System.Configuration.dll
+¦   ¦   ¦       ¦       System.Core.dll
+¦   ¦   ¦       ¦       System.dll
+¦   ¦   ¦       ¦       System.Interactive.Async.dll
+¦   ¦   ¦       ¦       System.Security.dll
+¦   ¦   ¦       ¦       System.Xml.dll
+¦   ¦   ¦       ¦       UnityEngine.AccessibilityModule.dll
+¦   ¦   ¦       ¦       UnityEngine.AIModule.dll
+¦   ¦   ¦       ¦       UnityEngine.AnimationModule.dll
+¦   ¦   ¦       ¦       UnityEngine.ARModule.dll
+¦   ¦   ¦       ¦       UnityEngine.AssetBundleModule.dll
+¦   ¦   ¦       ¦       UnityEngine.AudioModule.dll
+¦   ¦   ¦       ¦       UnityEngine.ClothModule.dll
+¦   ¦   ¦       ¦       UnityEngine.ClusterInputModule.dll
+¦   ¦   ¦       ¦       UnityEngine.ClusterRendererModule.dll
+¦   ¦   ¦       ¦       UnityEngine.CoreModule.dll
+¦   ¦   ¦       ¦       UnityEngine.CrashReportingModule.dll
+¦   ¦   ¦       ¦       UnityEngine.DirectorModule.dll
+¦   ¦   ¦       ¦       UnityEngine.dll
+¦   ¦   ¦       ¦       UnityEngine.GameCenterModule.dll
+¦   ¦   ¦       ¦       UnityEngine.GridModule.dll
+¦   ¦   ¦       ¦       UnityEngine.ImageConversionModule.dll
+¦   ¦   ¦       ¦       UnityEngine.IMGUIModule.dll
+¦   ¦   ¦       ¦       UnityEngine.InputModule.dll
+¦   ¦   ¦       ¦       UnityEngine.JSONSerializeModule.dll
+¦   ¦   ¦       ¦       UnityEngine.Networking.dll
+¦   ¦   ¦       ¦       UnityEngine.ParticlesLegacyModule.dll
+¦   ¦   ¦       ¦       UnityEngine.ParticleSystemModule.dll
+¦   ¦   ¦       ¦       UnityEngine.PerformanceReportingModule.dll
+¦   ¦   ¦       ¦       UnityEngine.Physics2DModule.dll
+¦   ¦   ¦       ¦       UnityEngine.PhysicsModule.dll
+¦   ¦   ¦       ¦       UnityEngine.ScreenCaptureModule.dll
+¦   ¦   ¦       ¦       UnityEngine.SharedInternalsModule.dll
+¦   ¦   ¦       ¦       UnityEngine.SpatialTracking.dll
+¦   ¦   ¦       ¦       UnityEngine.SpriteMaskModule.dll
+¦   ¦   ¦       ¦       UnityEngine.SpriteShapeModule.dll
+¦   ¦   ¦       ¦       UnityEngine.StandardEvents.dll
+¦   ¦   ¦       ¦       UnityEngine.StyleSheetsModule.dll
+¦   ¦   ¦       ¦       UnityEngine.TerrainModule.dll
+¦   ¦   ¦       ¦       UnityEngine.TerrainPhysicsModule.dll
+¦   ¦   ¦       ¦       UnityEngine.TextRenderingModule.dll
+¦   ¦   ¦       ¦       UnityEngine.TilemapModule.dll
+¦   ¦   ¦       ¦       UnityEngine.Timeline.dll
+¦   ¦   ¦       ¦       UnityEngine.UI.dll
+¦   ¦   ¦       ¦       UnityEngine.UIElementsModule.dll
+¦   ¦   ¦       ¦       UnityEngine.UIModule.dll
+¦   ¦   ¦       ¦       UnityEngine.UNETModule.dll
+¦   ¦   ¦       ¦       UnityEngine.UnityAnalyticsModule.dll
+¦   ¦   ¦       ¦       UnityEngine.UnityConnectModule.dll
+¦   ¦   ¦       ¦       UnityEngine.UnityWebRequestAudioModule.dll
+¦   ¦   ¦       ¦       UnityEngine.UnityWebRequestModule.dll
+¦   ¦   ¦       ¦       UnityEngine.UnityWebRequestTextureModule.dll
+¦   ¦   ¦       ¦       UnityEngine.UnityWebRequestWWWModule.dll
+¦   ¦   ¦       ¦       UnityEngine.VehiclesModule.dll
+¦   ¦   ¦       ¦       UnityEngine.VideoModule.dll
+¦   ¦   ¦       ¦       UnityEngine.VRModule.dll
+¦   ¦   ¦       ¦       UnityEngine.WebModule.dll
+¦   ¦   ¦       ¦       UnityEngine.WindModule.dll
+¦   ¦   ¦       ¦       
+¦   ¦   ¦       +---MonoBleedingEdge
+¦   ¦   ¦       ¦   +---EmbedRuntime
+¦   ¦   ¦       ¦   ¦       mono-2.0-bdwgc.dll
+¦   ¦   ¦       ¦   ¦       MonoPosixHelper.dll
+¦   ¦   ¦       ¦   ¦       
+¦   ¦   ¦       ¦   +---etc
+¦   ¦   ¦       ¦       +---mono
+¦   ¦   ¦       ¦           ¦   browscap.ini
+¦   ¦   ¦       ¦           ¦   config
+¦   ¦   ¦       ¦           ¦   
+¦   ¦   ¦       ¦           +---2.0
+¦   ¦   ¦       ¦           ¦   ¦   DefaultWsdlHelpGenerator.aspx
+¦   ¦   ¦       ¦           ¦   ¦   machine.config
+¦   ¦   ¦       ¦           ¦   ¦   settings.map
+¦   ¦   ¦       ¦           ¦   ¦   web.config
+¦   ¦   ¦       ¦           ¦   ¦   
+¦   ¦   ¦       ¦           ¦   +---Browsers
+¦   ¦   ¦       ¦           ¦           Compat.browser
+¦   ¦   ¦       ¦           ¦           
+¦   ¦   ¦       ¦           +---4.0
+¦   ¦   ¦       ¦           ¦   ¦   DefaultWsdlHelpGenerator.aspx
+¦   ¦   ¦       ¦           ¦   ¦   machine.config
+¦   ¦   ¦       ¦           ¦   ¦   settings.map
+¦   ¦   ¦       ¦           ¦   ¦   web.config
+¦   ¦   ¦       ¦           ¦   ¦   
+¦   ¦   ¦       ¦           ¦   +---Browsers
+¦   ¦   ¦       ¦           ¦           Compat.browser
+¦   ¦   ¦       ¦           ¦           
+¦   ¦   ¦       ¦           +---4.5
+¦   ¦   ¦       ¦           ¦   ¦   DefaultWsdlHelpGenerator.aspx
+¦   ¦   ¦       ¦           ¦   ¦   machine.config
+¦   ¦   ¦       ¦           ¦   ¦   settings.map
+¦   ¦   ¦       ¦           ¦   ¦   web.config
+¦   ¦   ¦       ¦           ¦   ¦   
+¦   ¦   ¦       ¦           ¦   +---Browsers
+¦   ¦   ¦       ¦           ¦           Compat.browser
+¦   ¦   ¦       ¦           ¦           
+¦   ¦   ¦       ¦           +---mconfig
+¦   ¦   ¦       ¦                   config.xml
+¦   ¦   ¦       ¦                   
+¦   ¦   ¦       +---Plugins
+¦   ¦   ¦       ¦       grpc_csharp_ext.x64.dll
+¦   ¦   ¦       ¦       
+¦   ¦   ¦       +---Resources
+¦   ¦   ¦               unity default resources
+¦   ¦   ¦               unity_builtin_extra
+¦   ¦   ¦               
+¦   ¦   +---wandb
+¦   ¦   ¦   ¦   ddpg_agent_wandb.py
+¦   ¦   ¦   ¦   ddpg_model_wandb.py
+¦   ¦   ¦   ¦   ddpg_utils_wandb.py
+¦   ¦   ¦   ¦   Reacher_WandB.ipynb
+¦   ¦   ¦   ¦   unity-environment.log
+¦   ¦   ¦   ¦   
+¦   ¦   ¦   +---.ipynb_checkpoints
+¦   ¦   ¦   ¦       ddpg_agent_wandb-checkpoint.py
+¦   ¦   ¦   ¦       ddpg_model_wandb-checkpoint.py
+¦   ¦   ¦   ¦       ddpg_utils_wandb-checkpoint.py
+¦   ¦   ¦   ¦       Reacher_WandB-checkpoint.ipynb
+¦   ¦   ¦   ¦       
+¦   ¦   ¦   +---artifacts
+¦   ¦   ¦   ¦       actor_in_training.pth
+¦   ¦   ¦   ¦       actor_trained.pth
+¦   ¦   ¦   ¦       actor_training_chkpnt10.pth
+¦   ¦   ¦   ¦       actor_training_chkpnt100.pth
+¦   ¦   ¦   ¦       actor_training_chkpnt110.pth
+¦   ¦   ¦   ¦       actor_training_chkpnt120.pth
+¦   ¦   ¦   ¦       actor_training_chkpnt130.pth
+¦   ¦   ¦   ¦       actor_training_chkpnt140.pth
+¦   ¦   ¦   ¦       actor_training_chkpnt150.pth
+¦   ¦   ¦   ¦       actor_training_chkpnt160.pth
+¦   ¦   ¦   ¦       actor_training_chkpnt170.pth
+¦   ¦   ¦   ¦       actor_training_chkpnt180.pth
+¦   ¦   ¦   ¦       actor_training_chkpnt190.pth
+¦   ¦   ¦   ¦       actor_training_chkpnt20.pth
+¦   ¦   ¦   ¦       actor_training_chkpnt200.pth
+¦   ¦   ¦   ¦       actor_training_chkpnt210.pth
+¦   ¦   ¦   ¦       actor_training_chkpnt220.pth
+¦   ¦   ¦   ¦       actor_training_chkpnt230.pth
+¦   ¦   ¦   ¦       actor_training_chkpnt240.pth
+¦   ¦   ¦   ¦       actor_training_chkpnt250.pth
+¦   ¦   ¦   ¦       actor_training_chkpnt260.pth
+¦   ¦   ¦   ¦       actor_training_chkpnt270.pth
+¦   ¦   ¦   ¦       actor_training_chkpnt280.pth
+¦   ¦   ¦   ¦       actor_training_chkpnt290.pth
+¦   ¦   ¦   ¦       actor_training_chkpnt30.pth
+¦   ¦   ¦   ¦       actor_training_chkpnt300.pth
+¦   ¦   ¦   ¦       actor_training_chkpnt40.pth
+¦   ¦   ¦   ¦       actor_training_chkpnt50.pth
+¦   ¦   ¦   ¦       actor_training_chkpnt60.pth
+¦   ¦   ¦   ¦       actor_training_chkpnt70.pth
+¦   ¦   ¦   ¦       actor_training_chkpnt80.pth
+¦   ¦   ¦   ¦       actor_training_chkpnt90.pth
+¦   ¦   ¦   ¦       critic_in_training.pth
+¦   ¦   ¦   ¦       critic_trained.pth
+¦   ¦   ¦   ¦       critic_training_chkpnt10.pth
+¦   ¦   ¦   ¦       critic_training_chkpnt100.pth
+¦   ¦   ¦   ¦       critic_training_chkpnt110.pth
+¦   ¦   ¦   ¦       critic_training_chkpnt120.pth
+¦   ¦   ¦   ¦       critic_training_chkpnt130.pth
+¦   ¦   ¦   ¦       critic_training_chkpnt140.pth
+¦   ¦   ¦   ¦       critic_training_chkpnt150.pth
+¦   ¦   ¦   ¦       critic_training_chkpnt160.pth
+¦   ¦   ¦   ¦       critic_training_chkpnt170.pth
+¦   ¦   ¦   ¦       critic_training_chkpnt180.pth
+¦   ¦   ¦   ¦       critic_training_chkpnt190.pth
+¦   ¦   ¦   ¦       critic_training_chkpnt20.pth
+¦   ¦   ¦   ¦       critic_training_chkpnt200.pth
+¦   ¦   ¦   ¦       critic_training_chkpnt210.pth
+¦   ¦   ¦   ¦       critic_training_chkpnt220.pth
+¦   ¦   ¦   ¦       critic_training_chkpnt230.pth
+¦   ¦   ¦   ¦       critic_training_chkpnt240.pth
+¦   ¦   ¦   ¦       critic_training_chkpnt250.pth
+¦   ¦   ¦   ¦       critic_training_chkpnt260.pth
+¦   ¦   ¦   ¦       critic_training_chkpnt270.pth
+¦   ¦   ¦   ¦       critic_training_chkpnt280.pth
+¦   ¦   ¦   ¦       critic_training_chkpnt290.pth
+¦   ¦   ¦   ¦       critic_training_chkpnt30.pth
+¦   ¦   ¦   ¦       critic_training_chkpnt300.pth
+¦   ¦   ¦   ¦       critic_training_chkpnt40.pth
+¦   ¦   ¦   ¦       critic_training_chkpnt50.pth
+¦   ¦   ¦   ¦       critic_training_chkpnt60.pth
+¦   ¦   ¦   ¦       critic_training_chkpnt70.pth
+¦   ¦   ¦   ¦       critic_training_chkpnt80.pth
+¦   ¦   ¦   ¦       critic_training_chkpnt90.pth
+¦   ¦   ¦   ¦       slvdpnt_actor.pth
+¦   ¦   ¦   ¦       slvdpnt_critic.pth
+¦   ¦   ¦   ¦       trained_actor.pth
+¦   ¦   ¦   ¦       trained_critic.pth
+¦   ¦   ¦   ¦       
+¦   ¦   ¦   +---wandb
+¦   ¦   ¦   ¦   ¦   debug-cli.David.log
+¦   ¦   ¦   ¦   ¦   
+¦   ¦   ¦   ¦   +---run-20230419_192806-llh4fm72
+¦   ¦   ¦   ¦   ¦   ¦   run-llh4fm72.wandb
+¦   ¦   ¦   ¦   ¦   ¦   
+¦   ¦   ¦   ¦   ¦   +---files
+¦   ¦   ¦   ¦   ¦   ¦       conda-environment.yaml
+¦   ¦   ¦   ¦   ¦   ¦       config.yaml
+¦   ¦   ¦   ¦   ¦   ¦       output.log
+¦   ¦   ¦   ¦   ¦   ¦       requirements.txt
+¦   ¦   ¦   ¦   ¦   ¦       wandb-metadata.json
+¦   ¦   ¦   ¦   ¦   ¦       wandb-summary.json
+¦   ¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   ¦   +---logs
+¦   ¦   ¦   ¦   ¦   ¦       debug-internal.log
+¦   ¦   ¦   ¦   ¦   ¦       debug.log
+¦   ¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   ¦   +---tmp
+¦   ¦   ¦   ¦   ¦       +---code
+¦   ¦   ¦   ¦   +---run-20230420_141458-lg36d1kb
+¦   ¦   ¦   ¦   ¦   ¦   run-lg36d1kb.wandb
+¦   ¦   ¦   ¦   ¦   ¦   
+¦   ¦   ¦   ¦   ¦   +---files
+¦   ¦   ¦   ¦   ¦   ¦       conda-environment.yaml
+¦   ¦   ¦   ¦   ¦   ¦       config.yaml
+¦   ¦   ¦   ¦   ¦   ¦       output.log
+¦   ¦   ¦   ¦   ¦   ¦       requirements.txt
+¦   ¦   ¦   ¦   ¦   ¦       wandb-metadata.json
+¦   ¦   ¦   ¦   ¦   ¦       wandb-summary.json
+¦   ¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   ¦   +---logs
+¦   ¦   ¦   ¦   ¦   ¦       debug-internal.log
+¦   ¦   ¦   ¦   ¦   ¦       debug.log
+¦   ¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   ¦   +---tmp
+¦   ¦   ¦   ¦   ¦       +---code
+¦   ¦   ¦   ¦   +---run-20230420_141845-erhp2ti3
+¦   ¦   ¦   ¦   ¦   ¦   run-erhp2ti3.wandb
+¦   ¦   ¦   ¦   ¦   ¦   
+¦   ¦   ¦   ¦   ¦   +---files
+¦   ¦   ¦   ¦   ¦   ¦       conda-environment.yaml
+¦   ¦   ¦   ¦   ¦   ¦       config.yaml
+¦   ¦   ¦   ¦   ¦   ¦       requirements.txt
+¦   ¦   ¦   ¦   ¦   ¦       wandb-metadata.json
+¦   ¦   ¦   ¦   ¦   ¦       wandb-summary.json
+¦   ¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   ¦   +---logs
+¦   ¦   ¦   ¦   ¦   ¦       debug-internal.log
+¦   ¦   ¦   ¦   ¦   ¦       debug.log
+¦   ¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   ¦   +---tmp
+¦   ¦   ¦   ¦   ¦       +---code
+¦   ¦   ¦   ¦   +---run-20230420_144628-e23bnzbm
+¦   ¦   ¦   ¦   ¦   ¦   run-e23bnzbm.wandb
+¦   ¦   ¦   ¦   ¦   ¦   
+¦   ¦   ¦   ¦   ¦   +---files
+¦   ¦   ¦   ¦   ¦   ¦       conda-environment.yaml
+¦   ¦   ¦   ¦   ¦   ¦       config.yaml
+¦   ¦   ¦   ¦   ¦   ¦       output.log
+¦   ¦   ¦   ¦   ¦   ¦       requirements.txt
+¦   ¦   ¦   ¦   ¦   ¦       wandb-metadata.json
+¦   ¦   ¦   ¦   ¦   ¦       wandb-summary.json
+¦   ¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   ¦   +---logs
+¦   ¦   ¦   ¦   ¦   ¦       debug-internal.log
+¦   ¦   ¦   ¦   ¦   ¦       debug.log
+¦   ¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   ¦   +---tmp
+¦   ¦   ¦   ¦   ¦       +---code
+¦   ¦   ¦   ¦   +---run-20230420_144743-8dy7okkk
+¦   ¦   ¦   ¦   ¦   ¦   run-8dy7okkk.wandb
+¦   ¦   ¦   ¦   ¦   ¦   
+¦   ¦   ¦   ¦   ¦   +---files
+¦   ¦   ¦   ¦   ¦   ¦       conda-environment.yaml
+¦   ¦   ¦   ¦   ¦   ¦       config.yaml
+¦   ¦   ¦   ¦   ¦   ¦       requirements.txt
+¦   ¦   ¦   ¦   ¦   ¦       wandb-metadata.json
+¦   ¦   ¦   ¦   ¦   ¦       wandb-summary.json
+¦   ¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   ¦   +---logs
+¦   ¦   ¦   ¦   ¦   ¦       debug-internal.log
+¦   ¦   ¦   ¦   ¦   ¦       debug.log
+¦   ¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   ¦   +---tmp
+¦   ¦   ¦   ¦   ¦       +---code
+¦   ¦   ¦   ¦   +---run-20230420_152359-1bd1m897
+¦   ¦   ¦   ¦   ¦   ¦   run-1bd1m897.wandb
+¦   ¦   ¦   ¦   ¦   ¦   
+¦   ¦   ¦   ¦   ¦   +---files
+¦   ¦   ¦   ¦   ¦   ¦       conda-environment.yaml
+¦   ¦   ¦   ¦   ¦   ¦       config.yaml
+¦   ¦   ¦   ¦   ¦   ¦       requirements.txt
+¦   ¦   ¦   ¦   ¦   ¦       wandb-metadata.json
+¦   ¦   ¦   ¦   ¦   ¦       wandb-summary.json
+¦   ¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   ¦   +---logs
+¦   ¦   ¦   ¦   ¦   ¦       debug-internal.log
+¦   ¦   ¦   ¦   ¦   ¦       debug.log
+¦   ¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   ¦   +---tmp
+¦   ¦   ¦   ¦   ¦       +---code
+¦   ¦   ¦   ¦   +---run-20230420_152430-q9l3pwk9
+¦   ¦   ¦   ¦   ¦   ¦   run-q9l3pwk9.wandb
+¦   ¦   ¦   ¦   ¦   ¦   
+¦   ¦   ¦   ¦   ¦   +---files
+¦   ¦   ¦   ¦   ¦   ¦       conda-environment.yaml
+¦   ¦   ¦   ¦   ¦   ¦       config.yaml
+¦   ¦   ¦   ¦   ¦   ¦       requirements.txt
+¦   ¦   ¦   ¦   ¦   ¦       wandb-metadata.json
+¦   ¦   ¦   ¦   ¦   ¦       wandb-summary.json
+¦   ¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   ¦   +---logs
+¦   ¦   ¦   ¦   ¦   ¦       debug-internal.log
+¦   ¦   ¦   ¦   ¦   ¦       debug.log
+¦   ¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   ¦   +---tmp
+¦   ¦   ¦   ¦   ¦       +---code
+¦   ¦   ¦   ¦   +---run-20230420_152610-km8l2i08
+¦   ¦   ¦   ¦   ¦   ¦   run-km8l2i08.wandb
+¦   ¦   ¦   ¦   ¦   ¦   
+¦   ¦   ¦   ¦   ¦   +---files
+¦   ¦   ¦   ¦   ¦   ¦       conda-environment.yaml
+¦   ¦   ¦   ¦   ¦   ¦       config.yaml
+¦   ¦   ¦   ¦   ¦   ¦       requirements.txt
+¦   ¦   ¦   ¦   ¦   ¦       wandb-metadata.json
+¦   ¦   ¦   ¦   ¦   ¦       wandb-summary.json
+¦   ¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   ¦   +---logs
+¦   ¦   ¦   ¦   ¦   ¦       debug-internal.log
+¦   ¦   ¦   ¦   ¦   ¦       debug.log
+¦   ¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   ¦   +---tmp
+¦   ¦   ¦   ¦   ¦       +---code
+¦   ¦   ¦   ¦   +---run-20230420_152901-vl147m5i
+¦   ¦   ¦   ¦   ¦   ¦   run-vl147m5i.wandb
+¦   ¦   ¦   ¦   ¦   ¦   
+¦   ¦   ¦   ¦   ¦   +---files
+¦   ¦   ¦   ¦   ¦   ¦       conda-environment.yaml
+¦   ¦   ¦   ¦   ¦   ¦       config.yaml
+¦   ¦   ¦   ¦   ¦   ¦       requirements.txt
+¦   ¦   ¦   ¦   ¦   ¦       wandb-metadata.json
+¦   ¦   ¦   ¦   ¦   ¦       wandb-summary.json
+¦   ¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   ¦   +---logs
+¦   ¦   ¦   ¦   ¦   ¦       debug-internal.log
+¦   ¦   ¦   ¦   ¦   ¦       debug.log
+¦   ¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   ¦   +---tmp
+¦   ¦   ¦   ¦   ¦       +---code
+¦   ¦   ¦   ¦   +---run-20230420_154302-avzzwp7n
+¦   ¦   ¦   ¦   ¦   ¦   run-avzzwp7n.wandb
+¦   ¦   ¦   ¦   ¦   ¦   
+¦   ¦   ¦   ¦   ¦   +---files
+¦   ¦   ¦   ¦   ¦   ¦       conda-environment.yaml
+¦   ¦   ¦   ¦   ¦   ¦       config.yaml
+¦   ¦   ¦   ¦   ¦   ¦       output.log
+¦   ¦   ¦   ¦   ¦   ¦       requirements.txt
+¦   ¦   ¦   ¦   ¦   ¦       wandb-metadata.json
+¦   ¦   ¦   ¦   ¦   ¦       wandb-summary.json
+¦   ¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   ¦   +---logs
+¦   ¦   ¦   ¦   ¦   ¦       debug-internal.log
+¦   ¦   ¦   ¦   ¦   ¦       debug.log
+¦   ¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   ¦   +---tmp
+¦   ¦   ¦   ¦   ¦       +---code
+¦   ¦   ¦   ¦   +---run-20230420_154525-17wjfaq9
+¦   ¦   ¦   ¦   ¦   ¦   run-17wjfaq9.wandb
+¦   ¦   ¦   ¦   ¦   ¦   
+¦   ¦   ¦   ¦   ¦   +---files
+¦   ¦   ¦   ¦   ¦   ¦       conda-environment.yaml
+¦   ¦   ¦   ¦   ¦   ¦       config.yaml
+¦   ¦   ¦   ¦   ¦   ¦       output.log
+¦   ¦   ¦   ¦   ¦   ¦       requirements.txt
+¦   ¦   ¦   ¦   ¦   ¦       wandb-metadata.json
+¦   ¦   ¦   ¦   ¦   ¦       wandb-summary.json
+¦   ¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   ¦   +---logs
+¦   ¦   ¦   ¦   ¦   ¦       debug-internal.log
+¦   ¦   ¦   ¦   ¦   ¦       debug.log
+¦   ¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   ¦   +---tmp
+¦   ¦   ¦   ¦   ¦       +---code
+¦   ¦   ¦   ¦   +---run-20230420_155635-4rdqoj09
+¦   ¦   ¦   ¦   ¦   ¦   run-4rdqoj09.wandb
+¦   ¦   ¦   ¦   ¦   ¦   
+¦   ¦   ¦   ¦   ¦   +---files
+¦   ¦   ¦   ¦   ¦   ¦       conda-environment.yaml
+¦   ¦   ¦   ¦   ¦   ¦       config.yaml
+¦   ¦   ¦   ¦   ¦   ¦       output.log
+¦   ¦   ¦   ¦   ¦   ¦       requirements.txt
+¦   ¦   ¦   ¦   ¦   ¦       wandb-metadata.json
+¦   ¦   ¦   ¦   ¦   ¦       wandb-summary.json
+¦   ¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   ¦   +---logs
+¦   ¦   ¦   ¦   ¦   ¦       debug-internal.log
+¦   ¦   ¦   ¦   ¦   ¦       debug.log
+¦   ¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   ¦   +---tmp
+¦   ¦   ¦   ¦   ¦       +---code
+¦   ¦   ¦   ¦   +---run-20230420_160156-fmijmaxc
+¦   ¦   ¦   ¦   ¦   ¦   run-fmijmaxc.wandb
+¦   ¦   ¦   ¦   ¦   ¦   
+¦   ¦   ¦   ¦   ¦   +---files
+¦   ¦   ¦   ¦   ¦   ¦       conda-environment.yaml
+¦   ¦   ¦   ¦   ¦   ¦       config.yaml
+¦   ¦   ¦   ¦   ¦   ¦       output.log
+¦   ¦   ¦   ¦   ¦   ¦       requirements.txt
+¦   ¦   ¦   ¦   ¦   ¦       wandb-metadata.json
+¦   ¦   ¦   ¦   ¦   ¦       wandb-summary.json
+¦   ¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   ¦   +---logs
+¦   ¦   ¦   ¦   ¦   ¦       debug-internal.log
+¦   ¦   ¦   ¦   ¦   ¦       debug.log
+¦   ¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   ¦   +---tmp
+¦   ¦   ¦   ¦   ¦       +---code
+¦   ¦   ¦   ¦   +---run-20230420_161931-ixk0x88r
+¦   ¦   ¦   ¦   ¦   ¦   run-ixk0x88r.wandb
+¦   ¦   ¦   ¦   ¦   ¦   
+¦   ¦   ¦   ¦   ¦   +---files
+¦   ¦   ¦   ¦   ¦   ¦       conda-environment.yaml
+¦   ¦   ¦   ¦   ¦   ¦       config.yaml
+¦   ¦   ¦   ¦   ¦   ¦       output.log
+¦   ¦   ¦   ¦   ¦   ¦       requirements.txt
+¦   ¦   ¦   ¦   ¦   ¦       wandb-metadata.json
+¦   ¦   ¦   ¦   ¦   ¦       wandb-summary.json
+¦   ¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   ¦   +---logs
+¦   ¦   ¦   ¦   ¦   ¦       debug-internal.log
+¦   ¦   ¦   ¦   ¦   ¦       debug.log
+¦   ¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   ¦   +---tmp
+¦   ¦   ¦   ¦   ¦       +---code
+¦   ¦   ¦   ¦   +---run-20230420_165303-medqcl1h
+¦   ¦   ¦   ¦   ¦   ¦   run-medqcl1h.wandb
+¦   ¦   ¦   ¦   ¦   ¦   
+¦   ¦   ¦   ¦   ¦   +---files
+¦   ¦   ¦   ¦   ¦   ¦       conda-environment.yaml
+¦   ¦   ¦   ¦   ¦   ¦       config.yaml
+¦   ¦   ¦   ¦   ¦   ¦       output.log
+¦   ¦   ¦   ¦   ¦   ¦       requirements.txt
+¦   ¦   ¦   ¦   ¦   ¦       wandb-metadata.json
+¦   ¦   ¦   ¦   ¦   ¦       wandb-summary.json
+¦   ¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   ¦   +---logs
+¦   ¦   ¦   ¦   ¦   ¦       debug-internal.log
+¦   ¦   ¦   ¦   ¦   ¦       debug.log
+¦   ¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   ¦   +---tmp
+¦   ¦   ¦   ¦   ¦       +---code
+¦   ¦   ¦   ¦   +---run-20230420_171818-52jrghfx
+¦   ¦   ¦   ¦   ¦   ¦   run-52jrghfx.wandb
+¦   ¦   ¦   ¦   ¦   ¦   
+¦   ¦   ¦   ¦   ¦   +---files
+¦   ¦   ¦   ¦   ¦   ¦       conda-environment.yaml
+¦   ¦   ¦   ¦   ¦   ¦       config.yaml
+¦   ¦   ¦   ¦   ¦   ¦       output.log
+¦   ¦   ¦   ¦   ¦   ¦       requirements.txt
+¦   ¦   ¦   ¦   ¦   ¦       wandb-metadata.json
+¦   ¦   ¦   ¦   ¦   ¦       wandb-summary.json
+¦   ¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   ¦   +---logs
+¦   ¦   ¦   ¦   ¦   ¦       debug-internal.log
+¦   ¦   ¦   ¦   ¦   ¦       debug.log
+¦   ¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   ¦   +---tmp
+¦   ¦   ¦   ¦   ¦       +---code
+¦   ¦   ¦   ¦   +---run-20230420_172024-zwyn9nzi
+¦   ¦   ¦   ¦   ¦   ¦   run-zwyn9nzi.wandb
+¦   ¦   ¦   ¦   ¦   ¦   
+¦   ¦   ¦   ¦   ¦   +---files
+¦   ¦   ¦   ¦   ¦   ¦       conda-environment.yaml
+¦   ¦   ¦   ¦   ¦   ¦       config.yaml
+¦   ¦   ¦   ¦   ¦   ¦       output.log
+¦   ¦   ¦   ¦   ¦   ¦       requirements.txt
+¦   ¦   ¦   ¦   ¦   ¦       wandb-metadata.json
+¦   ¦   ¦   ¦   ¦   ¦       wandb-summary.json
+¦   ¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   ¦   +---logs
+¦   ¦   ¦   ¦   ¦   ¦       debug-internal.log
+¦   ¦   ¦   ¦   ¦   ¦       debug.log
+¦   ¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   ¦   +---tmp
+¦   ¦   ¦   ¦   ¦       +---code
+¦   ¦   ¦   ¦   +---run-20230421_151526-y65woae5
+¦   ¦   ¦   ¦   ¦   ¦   run-y65woae5.wandb
+¦   ¦   ¦   ¦   ¦   ¦   
+¦   ¦   ¦   ¦   ¦   +---files
+¦   ¦   ¦   ¦   ¦   ¦       conda-environment.yaml
+¦   ¦   ¦   ¦   ¦   ¦       config.yaml
+¦   ¦   ¦   ¦   ¦   ¦       output.log
+¦   ¦   ¦   ¦   ¦   ¦       requirements.txt
+¦   ¦   ¦   ¦   ¦   ¦       wandb-metadata.json
+¦   ¦   ¦   ¦   ¦   ¦       wandb-summary.json
+¦   ¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   ¦   +---logs
+¦   ¦   ¦   ¦   ¦   ¦       debug-internal.log
+¦   ¦   ¦   ¦   ¦   ¦       debug.log
+¦   ¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   ¦   +---tmp
+¦   ¦   ¦   ¦   ¦       +---code
+¦   ¦   ¦   ¦   +---run-20230422_233417-8neqve4t
+¦   ¦   ¦   ¦   ¦   ¦   run-8neqve4t.wandb
+¦   ¦   ¦   ¦   ¦   ¦   
+¦   ¦   ¦   ¦   ¦   +---files
+¦   ¦   ¦   ¦   ¦   ¦       conda-environment.yaml
+¦   ¦   ¦   ¦   ¦   ¦       config.yaml
+¦   ¦   ¦   ¦   ¦   ¦       output.log
+¦   ¦   ¦   ¦   ¦   ¦       requirements.txt
+¦   ¦   ¦   ¦   ¦   ¦       wandb-metadata.json
+¦   ¦   ¦   ¦   ¦   ¦       wandb-summary.json
+¦   ¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   ¦   +---logs
+¦   ¦   ¦   ¦   ¦   ¦       debug-internal.log
+¦   ¦   ¦   ¦   ¦   ¦       debug.log
+¦   ¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   ¦   +---tmp
+¦   ¦   ¦   ¦   ¦       +---code
+¦   ¦   ¦   ¦   +---run-20230422_234024-y9o12y63
+¦   ¦   ¦   ¦   ¦   ¦   run-y9o12y63.wandb
+¦   ¦   ¦   ¦   ¦   ¦   
+¦   ¦   ¦   ¦   ¦   +---files
+¦   ¦   ¦   ¦   ¦   ¦       conda-environment.yaml
+¦   ¦   ¦   ¦   ¦   ¦       config.yaml
+¦   ¦   ¦   ¦   ¦   ¦       output.log
+¦   ¦   ¦   ¦   ¦   ¦       requirements.txt
+¦   ¦   ¦   ¦   ¦   ¦       wandb-metadata.json
+¦   ¦   ¦   ¦   ¦   ¦       wandb-summary.json
+¦   ¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   ¦   +---logs
+¦   ¦   ¦   ¦   ¦   ¦       debug-internal.log
+¦   ¦   ¦   ¦   ¦   ¦       debug.log
+¦   ¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   ¦   +---tmp
+¦   ¦   ¦   ¦   ¦       +---code
+¦   ¦   ¦   ¦   +---run-20230422_235447-efq58ilr
+¦   ¦   ¦   ¦   ¦   ¦   run-efq58ilr.wandb
+¦   ¦   ¦   ¦   ¦   ¦   
+¦   ¦   ¦   ¦   ¦   +---files
+¦   ¦   ¦   ¦   ¦   ¦       conda-environment.yaml
+¦   ¦   ¦   ¦   ¦   ¦       config.yaml
+¦   ¦   ¦   ¦   ¦   ¦       output.log
+¦   ¦   ¦   ¦   ¦   ¦       requirements.txt
+¦   ¦   ¦   ¦   ¦   ¦       wandb-metadata.json
+¦   ¦   ¦   ¦   ¦   ¦       wandb-summary.json
+¦   ¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   ¦   +---logs
+¦   ¦   ¦   ¦   ¦   ¦       debug-internal.log
+¦   ¦   ¦   ¦   ¦   ¦       debug.log
+¦   ¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   ¦   +---tmp
+¦   ¦   ¦   ¦   ¦       +---code
+¦   ¦   ¦   ¦   +---run-20230423_001053-bx6y58mp
+¦   ¦   ¦   ¦   ¦   ¦   run-bx6y58mp.wandb
+¦   ¦   ¦   ¦   ¦   ¦   
+¦   ¦   ¦   ¦   ¦   +---files
+¦   ¦   ¦   ¦   ¦   ¦       conda-environment.yaml
+¦   ¦   ¦   ¦   ¦   ¦       config.yaml
+¦   ¦   ¦   ¦   ¦   ¦       output.log
+¦   ¦   ¦   ¦   ¦   ¦       requirements.txt
+¦   ¦   ¦   ¦   ¦   ¦       wandb-metadata.json
+¦   ¦   ¦   ¦   ¦   ¦       wandb-summary.json
+¦   ¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   ¦   +---logs
+¦   ¦   ¦   ¦   ¦   ¦       debug-internal.log
+¦   ¦   ¦   ¦   ¦   ¦       debug.log
+¦   ¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   ¦   +---tmp
+¦   ¦   ¦   ¦   ¦       +---code
+¦   ¦   ¦   ¦   +---run-20230423_011748-e55r625b
+¦   ¦   ¦   ¦   ¦   ¦   run-e55r625b.wandb
+¦   ¦   ¦   ¦   ¦   ¦   
+¦   ¦   ¦   ¦   ¦   +---files
+¦   ¦   ¦   ¦   ¦   ¦       conda-environment.yaml
+¦   ¦   ¦   ¦   ¦   ¦       config.yaml
+¦   ¦   ¦   ¦   ¦   ¦       output.log
+¦   ¦   ¦   ¦   ¦   ¦       requirements.txt
+¦   ¦   ¦   ¦   ¦   ¦       wandb-metadata.json
+¦   ¦   ¦   ¦   ¦   ¦       wandb-summary.json
+¦   ¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   ¦   +---logs
+¦   ¦   ¦   ¦   ¦   ¦       debug-internal.log
+¦   ¦   ¦   ¦   ¦   ¦       debug.log
+¦   ¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   ¦   +---tmp
+¦   ¦   ¦   ¦   ¦       +---code
+¦   ¦   ¦   ¦   +---run-20230423_021920-w73p50mt
+¦   ¦   ¦   ¦       ¦   run-w73p50mt.wandb
+¦   ¦   ¦   ¦       ¦   
+¦   ¦   ¦   ¦       +---files
+¦   ¦   ¦   ¦       ¦       conda-environment.yaml
+¦   ¦   ¦   ¦       ¦       config.yaml
+¦   ¦   ¦   ¦       ¦       output.log
+¦   ¦   ¦   ¦       ¦       requirements.txt
+¦   ¦   ¦   ¦       ¦       wandb-metadata.json
+¦   ¦   ¦   ¦       ¦       wandb-summary.json
+¦   ¦   ¦   ¦       ¦       
+¦   ¦   ¦   ¦       +---logs
+¦   ¦   ¦   ¦       ¦       debug-internal.log
+¦   ¦   ¦   ¦       ¦       debug.log
+¦   ¦   ¦   ¦       ¦       
+¦   ¦   ¦   ¦       +---tmp
+¦   ¦   ¦   ¦           +---code
+¦   ¦   ¦   +---__pycache__
+¦   ¦   ¦           ddpg_agent_wandb.cpython-39.pyc
+¦   ¦   ¦           ddpg_model_wandb.cpython-39.pyc
+¦   ¦   ¦           
+¦   ¦   +---__pycache__
+¦   ¦           ddpg_agent.cpython-39.pyc
+¦   ¦           ddpg_model.cpython-39.pyc
+¦   ¦           ddpg_train.cpython-39.pyc
+¦   ¦           
+¦   +---ddpg_single_agent
+¦   ¦   ¦   ddpg_agent.py
+¦   ¦   ¦   ddpg_model.py
+¦   ¦   ¦   ReacherOne.ipynb
+¦   ¦   ¦   unity-environment.log
+¦   ¦   ¦   
+¦   ¦   +---.ipynb_checkpoints
+¦   ¦   ¦       ddpg_agent-checkpoint.py
+¦   ¦   ¦       ddpg_model-checkpoint.py
+¦   ¦   ¦       ReacherOne-checkpoint.ipynb
+¦   ¦   ¦       
+¦   ¦   +---checkpoints
+¦   ¦   ¦       actor_trained.pth
+¦   ¦   ¦       actor_training_chkpnt10.pth
+¦   ¦   ¦       actor_training_chkpnt100.pth
+¦   ¦   ¦       actor_training_chkpnt20.pth
+¦   ¦   ¦       actor_training_chkpnt30.pth
+¦   ¦   ¦       actor_training_chkpnt40.pth
+¦   ¦   ¦       actor_training_chkpnt50.pth
+¦   ¦   ¦       actor_training_chkpnt60.pth
+¦   ¦   ¦       actor_training_chkpnt70.pth
+¦   ¦   ¦       actor_training_chkpnt80.pth
+¦   ¦   ¦       actor_training_chkpnt90.pth
+¦   ¦   ¦       critic_trained.pth
+¦   ¦   ¦       critic_training_chkpnt10.pth
+¦   ¦   ¦       critic_training_chkpnt100.pth
+¦   ¦   ¦       critic_training_chkpnt20.pth
+¦   ¦   ¦       critic_training_chkpnt30.pth
+¦   ¦   ¦       critic_training_chkpnt40.pth
+¦   ¦   ¦       critic_training_chkpnt50.pth
+¦   ¦   ¦       critic_training_chkpnt60.pth
+¦   ¦   ¦       critic_training_chkpnt70.pth
+¦   ¦   ¦       critic_training_chkpnt80.pth
+¦   ¦   ¦       critic_training_chkpnt90.pth
+¦   ¦   ¦       slvdpnt_actor.pth
+¦   ¦   ¦       slvdpnt_critic.pth
+¦   ¦   ¦       trained_actor_1.pth
+¦   ¦   ¦       trained_actor_20.pth
+¦   ¦   ¦       trained_critic_1.pth
+¦   ¦   ¦       trained_critic_20.pth
+¦   ¦   ¦       
+¦   ¦   +---__pycache__
+¦   ¦           ddpg_agent.cpython-39.pyc
+¦   ¦           ddpg_model.cpython-39.pyc
+¦   ¦           
+¦   +---docs
+¦   ¦   ¦   continuous_DQL.pdf
+¦   ¦   ¦   reacher_env.html
+¦   ¦   ¦   
+¦   ¦   +---reacher_env_files
+¦   ¦           colorschememapping.xml
+¦   ¦           filelist.xml
+¦   ¦           image001.gif
+¦   ¦           image002.png
+¦   ¦           reacher.gif
+¦   ¦           themedata.thmx
+¦   ¦           unknown.png
+¦   ¦           
+¦   +---p2_submit
+¦   +---parallelEnv
+¦   ¦   ¦   CC_PE.ipynb
+¦   ¦   ¦   parallelEnv.jupyterlab-workspace
+¦   ¦   ¦   parallelEnv.py
+¦   ¦   ¦   unity-environment.log
+¦   ¦   ¦   utils.py
+¦   ¦   ¦   
+¦   ¦   +---.ipynb_checkpoints
+¦   ¦   ¦       CC_PE-checkpoint.ipynb
+¦   ¦   ¦       parallelEnv-checkpoint.py
+¦   ¦   ¦       utils-checkpoint.py
+¦   ¦   ¦       
+¦   ¦   +---__pycache__
+¦   ¦           parallelEnv.cpython-36.pyc
+¦   ¦           parallelEnv.cpython-39.pyc
+¦   ¦           utils.cpython-36.pyc
+¦   ¦           utils.cpython-39.pyc
+¦   ¦           
+¦   +---ppo_reinforce
+¦   ¦   ¦   CC-RNFRC.ipynb
+¦   ¦   ¦   CC1_DDPG.ipynb
+¦   ¦   ¦   CC20_PPO_win.ipynb
+¦   ¦   ¦   parallelEnv.py
+¦   ¦   ¦   parallelEnv_v.py
+¦   ¦   ¦   pong-PPO.ipynb
+¦   ¦   ¦   pong_utils.py
+¦   ¦   ¦   pong_utils_s.py
+¦   ¦   ¦   PPO.ipynb
+¦   ¦   ¦   reacher_PPO.ipynb
+¦   ¦   ¦   
+¦   ¦   +---.ipynb_checkpoints
+¦   ¦   ¦       CC-RNFRC-checkpoint.ipynb
+¦   ¦   ¦       CC20_PPO_win-checkpoint.ipynb
+¦   ¦   ¦       pong-PPO-checkpoint.ipynb
+¦   ¦   ¦       pong_utils-checkpoint.py
+¦   ¦   ¦       PPO-checkpoint.ipynb
+¦   ¦   ¦       reacher_PPO-checkpoint.ipynb
+¦   ¦   ¦       
+¦   ¦   +---__pycache__
+¦   ¦           parallelEnv.cpython-310.pyc
+¦   ¦           pong_utils.cpython-310.pyc
+¦   ¦           
+¦   +---python
+¦   ¦   ¦   alt_requirements.txt
+¦   ¦   ¦   Basics.ipynb
+¦   ¦   ¦   benchmark_CC.pdf
+¦   ¦   ¦   Colab_Unity_1_Run.ipynb
+¦   ¦   ¦   learn.py
+¦   ¦   ¦   README.md
+¦   ¦   ¦   requirements.txt
+¦   ¦   ¦   setup.py
+¦   ¦   ¦   trainer_config.yaml
+¦   ¦   ¦   
+¦   ¦   +---.ipynb_checkpoints
+¦   ¦   ¦       Basics-checkpoint.ipynb
+¦   ¦   ¦       Colab_Unity_1_Run-checkpoint.ipynb
+¦   ¦   ¦       requirements-checkpoint.txt
+¦   ¦   ¦       
+¦   ¦   +---.vs
+¦   ¦   ¦   ¦   ProjectSettings.json
+¦   ¦   ¦   ¦   slnx.sqlite
+¦   ¦   ¦   ¦   VSWorkspaceState.json
+¦   ¦   ¦   ¦   
+¦   ¦   ¦   +---python
+¦   ¦   ¦       +---FileContentIndex
+¦   ¦   ¦       ¦   ¦   1840a5e5-6f21-4cea-9126-7cb4e51d814a.vsidx
+¦   ¦   ¦       ¦   ¦   read.lock
+¦   ¦   ¦       ¦   ¦   
+¦   ¦   ¦       ¦   +---merges
+¦   ¦   ¦       +---v17
+¦   ¦   +---build
+¦   ¦   ¦   +---bdist.win-amd64
+¦   ¦   ¦   +---lib
+¦   ¦   ¦       +---communicator_objects
+¦   ¦   ¦       ¦       agent_action_proto_pb2.py
+¦   ¦   ¦       ¦       agent_info_proto_pb2.py
+¦   ¦   ¦       ¦       brain_parameters_proto_pb2.py
+¦   ¦   ¦       ¦       brain_type_proto_pb2.py
+¦   ¦   ¦       ¦       command_proto_pb2.py
+¦   ¦   ¦       ¦       engine_configuration_proto_pb2.py
+¦   ¦   ¦       ¦       environment_parameters_proto_pb2.py
+¦   ¦   ¦       ¦       header_pb2.py
+¦   ¦   ¦       ¦       resolution_proto_pb2.py
+¦   ¦   ¦       ¦       space_type_proto_pb2.py
+¦   ¦   ¦       ¦       unity_input_pb2.py
+¦   ¦   ¦       ¦       unity_message_pb2.py
+¦   ¦   ¦       ¦       unity_output_pb2.py
+¦   ¦   ¦       ¦       unity_rl_initialization_input_pb2.py
+¦   ¦   ¦       ¦       unity_rl_initialization_output_pb2.py
+¦   ¦   ¦       ¦       unity_rl_input_pb2.py
+¦   ¦   ¦       ¦       unity_rl_output_pb2.py
+¦   ¦   ¦       ¦       unity_to_external_pb2.py
+¦   ¦   ¦       ¦       unity_to_external_pb2_grpc.py
+¦   ¦   ¦       ¦       __init__.py
+¦   ¦   ¦       ¦       
+¦   ¦   ¦       +---p2_utils
+¦   ¦   ¦       ¦       parallelEnv.py
+¦   ¦   ¦       ¦       ppo_utils.py
+¦   ¦   ¦       ¦       __init__.py
+¦   ¦   ¦       ¦       
+¦   ¦   ¦       +---tests
+¦   ¦   ¦       ¦       mock_communicator.py
+¦   ¦   ¦       ¦       test_bc.py
+¦   ¦   ¦       ¦       test_ppo.py
+¦   ¦   ¦       ¦       test_unityagents.py
+¦   ¦   ¦       ¦       test_unitytrainers.py
+¦   ¦   ¦       ¦       __init__.py
+¦   ¦   ¦       ¦       
+¦   ¦   ¦       +---unityagents
+¦   ¦   ¦       ¦       brain.py
+¦   ¦   ¦       ¦       communicator.py
+¦   ¦   ¦       ¦       curriculum.py
+¦   ¦   ¦       ¦       environment.py
+¦   ¦   ¦       ¦       exception.py
+¦   ¦   ¦       ¦       rpc_communicator.py
+¦   ¦   ¦       ¦       socket_communicator.py
+¦   ¦   ¦       ¦       __init__.py
+¦   ¦   ¦       ¦       
+¦   ¦   ¦       +---unitytrainers
+¦   ¦   ¦           ¦   buffer.py
+¦   ¦   ¦           ¦   models.py
+¦   ¦   ¦           ¦   trainer.py
+¦   ¦   ¦           ¦   trainer_controller.py
+¦   ¦   ¦           ¦   __init__.py
+¦   ¦   ¦           ¦   
+¦   ¦   ¦           +---bc
+¦   ¦   ¦           ¦       models.py
+¦   ¦   ¦           ¦       trainer.py
+¦   ¦   ¦           ¦       __init__.py
+¦   ¦   ¦           ¦       
+¦   ¦   ¦           +---ppo
+¦   ¦   ¦                   models.py
+¦   ¦   ¦                   trainer.py
+¦   ¦   ¦                   __init__.py
+¦   ¦   ¦                   
+¦   ¦   +---communicator_objects
+¦   ¦   ¦   ¦   agent_action_proto_pb2.py
+¦   ¦   ¦   ¦   agent_info_proto_pb2.py
+¦   ¦   ¦   ¦   brain_parameters_proto_pb2.py
+¦   ¦   ¦   ¦   brain_type_proto_pb2.py
+¦   ¦   ¦   ¦   command_proto_pb2.py
+¦   ¦   ¦   ¦   engine_configuration_proto_pb2.py
+¦   ¦   ¦   ¦   environment_parameters_proto_pb2.py
+¦   ¦   ¦   ¦   header_pb2.py
+¦   ¦   ¦   ¦   resolution_proto_pb2.py
+¦   ¦   ¦   ¦   space_type_proto_pb2.py
+¦   ¦   ¦   ¦   unity_input_pb2.py
+¦   ¦   ¦   ¦   unity_message_pb2.py
+¦   ¦   ¦   ¦   unity_output_pb2.py
+¦   ¦   ¦   ¦   unity_rl_initialization_input_pb2.py
+¦   ¦   ¦   ¦   unity_rl_initialization_output_pb2.py
+¦   ¦   ¦   ¦   unity_rl_input_pb2.py
+¦   ¦   ¦   ¦   unity_rl_output_pb2.py
+¦   ¦   ¦   ¦   unity_to_external_pb2.py
+¦   ¦   ¦   ¦   unity_to_external_pb2_grpc.py
+¦   ¦   ¦   ¦   __init__.py
+¦   ¦   ¦   ¦   
+¦   ¦   ¦   +---__pycache__
+¦   ¦   ¦           agent_action_proto_pb2.cpython-36.pyc
+¦   ¦   ¦           agent_info_proto_pb2.cpython-36.pyc
+¦   ¦   ¦           brain_parameters_proto_pb2.cpython-36.pyc
+¦   ¦   ¦           brain_type_proto_pb2.cpython-36.pyc
+¦   ¦   ¦           command_proto_pb2.cpython-36.pyc
+¦   ¦   ¦           engine_configuration_proto_pb2.cpython-36.pyc
+¦   ¦   ¦           environment_parameters_proto_pb2.cpython-36.pyc
+¦   ¦   ¦           header_pb2.cpython-36.pyc
+¦   ¦   ¦           resolution_proto_pb2.cpython-36.pyc
+¦   ¦   ¦           space_type_proto_pb2.cpython-36.pyc
+¦   ¦   ¦           unity_input_pb2.cpython-36.pyc
+¦   ¦   ¦           unity_message_pb2.cpython-36.pyc
+¦   ¦   ¦           unity_output_pb2.cpython-36.pyc
+¦   ¦   ¦           unity_rl_initialization_input_pb2.cpython-36.pyc
+¦   ¦   ¦           unity_rl_initialization_output_pb2.cpython-36.pyc
+¦   ¦   ¦           unity_rl_input_pb2.cpython-36.pyc
+¦   ¦   ¦           unity_rl_output_pb2.cpython-36.pyc
+¦   ¦   ¦           unity_to_external_pb2.cpython-36.pyc
+¦   ¦   ¦           unity_to_external_pb2_grpc.cpython-36.pyc
+¦   ¦   ¦           __init__.cpython-36.pyc
+¦   ¦   ¦           
+¦   ¦   +---curricula
+¦   ¦   ¦       push.json
+¦   ¦   ¦       test.json
+¦   ¦   ¦       wall.json
+¦   ¦   ¦       
+¦   ¦   +---p2_utils
+¦   ¦   ¦       parallelEnv.py
+¦   ¦   ¦       ppo_utils.py
+¦   ¦   ¦       __init__.py
+¦   ¦   ¦       
+¦   ¦   +---tests
+¦   ¦   ¦       mock_communicator.py
+¦   ¦   ¦       test_bc.py
+¦   ¦   ¦       test_ppo.py
+¦   ¦   ¦       test_unityagents.py
+¦   ¦   ¦       test_unitytrainers.py
+¦   ¦   ¦       __init__.py
+¦   ¦   ¦       
+¦   ¦   +---unityagents
+¦   ¦   ¦   ¦   brain.py
+¦   ¦   ¦   ¦   communicator.py
+¦   ¦   ¦   ¦   curriculum.py
+¦   ¦   ¦   ¦   environment.py
+¦   ¦   ¦   ¦   exception.py
+¦   ¦   ¦   ¦   rpc_communicator.py
+¦   ¦   ¦   ¦   socket_communicator.py
+¦   ¦   ¦   ¦   __init__.py
+¦   ¦   ¦   ¦   
+¦   ¦   ¦   +---__pycache__
+¦   ¦   ¦           brain.cpython-36.pyc
+¦   ¦   ¦           communicator.cpython-36.pyc
+¦   ¦   ¦           curriculum.cpython-36.pyc
+¦   ¦   ¦           environment.cpython-36.pyc
+¦   ¦   ¦           exception.cpython-36.pyc
+¦   ¦   ¦           rpc_communicator.cpython-36.pyc
+¦   ¦   ¦           socket_communicator.cpython-36.pyc
+¦   ¦   ¦           __init__.cpython-36.pyc
+¦   ¦   ¦           
+¦   ¦   +---unityagents.egg-info
+¦   ¦   ¦       dependency_links.txt
+¦   ¦   ¦       PKG-INFO
+¦   ¦   ¦       requires.txt
+¦   ¦   ¦       SOURCES.txt
+¦   ¦   ¦       top_level.txt
+¦   ¦   ¦       
+¦   ¦   +---unitytrainers
+¦   ¦       ¦   buffer.py
+¦   ¦       ¦   models.py
+¦   ¦       ¦   trainer.py
+¦   ¦       ¦   trainer_controller.py
+¦   ¦       ¦   __init__.py
+¦   ¦       ¦   
+¦   ¦       +---bc
+¦   ¦       ¦       models.py
+¦   ¦       ¦       trainer.py
+¦   ¦       ¦       __init__.py
+¦   ¦       ¦       
+¦   ¦       +---ppo
+¦   ¦               models.py
+¦   ¦               trainer.py
+¦   ¦               __init__.py
+¦   ¦               
+¦   +---zips
+¦   ¦       python_zip_p2.zip
+¦   ¦       reacher_one_windows.zip
+¦   ¦       reacher_twenty_windows.zip
+¦   ¦       zipdir.py
+¦   ¦       
+¦   +---__pycache__
+¦           ddpg_agent.cpython-36.pyc
+¦           ddpg_agent.cpython-39.pyc
+¦           ddpg_model.cpython-36.pyc
+¦           ddpg_model.cpython-39.pyc
+¦           
++---p3_collab-compet
+¦       README.md
+¦       Soccer.ipynb
+¦       Tennis.ipynb
+¦       
++---pong-PPO-REINFORCE
+¦   ¦   parallelEnv.py
+¦   ¦   parallelEnv_24.py
+¦   ¦   parallelEnv_PPO.py
+¦   ¦   parallelEnv_X.py
+¦   ¦   pong-PPO-OG.ipynb
+¦   ¦   pong-REINFORCE-OG.ipynb
+¦   ¦   pong_ppo.jupyterlab-workspace
+¦   ¦   pong_PPO_OG.ipynb
+¦   ¦   pong_PPO_X.ipynb
+¦   ¦   pong_REINFORCE_X.ipynb
+¦   ¦   pong_utils.py
+¦   ¦   pong_utils_OG.py
+¦   ¦   pong_utils_X.py
+¦   ¦   PPO.ipynb
+¦   ¦   
+¦   +---.ipynb_checkpoints
+¦   ¦       parallelEnv-checkpoint.py
+¦   ¦       parallelEnv_PPO-checkpoint.py
+¦   ¦       parallelEnv_X-checkpoint.py
+¦   ¦       pong-PPO-OG-checkpoint.ipynb
+¦   ¦       pong-REINFORCE-OG-checkpoint.ipynb
+¦   ¦       pong_PPO_OG-checkpoint.ipynb
+¦   ¦       pong_PPO_X-checkpoint.ipynb
+¦   ¦       pong_REINFORCE_X-checkpoint.ipynb
+¦   ¦       pong_utils_X-checkpoint.py
+¦   ¦       PPO-checkpoint.ipynb
+¦   ¦       
+¦   +---data
+¦   ¦       PPO_high.policy
+¦   ¦       PPO_OG.policy
+¦   ¦       REINFORCE_OG.policy
+¦   ¦       training_PPO.policy
+¦   ¦       
+¦   +---__pycache__
+¦           js_examples.cpython-39.pyc
+¦           parallelEnv.cpython-36.pyc
+¦           parallelEnv.cpython-39.pyc
+¦           parallelEnv_PPO.cpython-39.pyc
+¦           parallelEnv_X.cpython-39.pyc
+¦           pong_utils.cpython-36.pyc
+¦           pong_utils.cpython-39.pyc
+¦           pong_utils_OG.cpython-39.pyc
+¦           
++---reinforce
+¦       pg-pong-not-sure.py
+¦       README.md
+¦       REINFORCE_not_sure.ipynb
+¦       REINFORCE_OG.ipynb
+¦       reinforce_pend_tutorial.ipynb
+¦       
++---temporal-difference
+¦       check_test.py
+¦       plot_utils.py
+¦       README.md
+¦       Temporal_Difference.ipynb
+¦       Temporal_Difference_Solution.ipynb
+¦       Temporal_Difference_v0.ipynb
+¦       
++---tile-coding
+    ¦   grid_tilings.py
+    ¦   README.md
+    ¦   Tiled_Lunar_Continuous.ipynb
+    ¦   Tile_Coding.ipynb
+    ¦   Tile_Coding_OG.ipynb
+    ¦   
+    +---.ipynb_checkpoints
+            grid_tilings-checkpoint.py
+            README-checkpoint.md
+            Tiled_Lunar_Continuous-checkpoint.ipynb
+            Tile_Coding-checkpoint.ipynb
+            
